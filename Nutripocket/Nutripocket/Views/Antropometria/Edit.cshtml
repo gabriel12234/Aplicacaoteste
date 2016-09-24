@@ -1,0 +1,84 @@
+﻿@model Nutripocket.Models.ANTROPOMETRIA
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>ANTROPOMETRIA</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.ID_ANTRO)
+
+        @Html.HiddenFor(model => model.ID_PACIENTE)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.PESO_ATUAL, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.PESO_ATUAL)
+                @Html.ValidationMessageFor(model => model.PESO_ATUAL)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.PESO_HABITUAL, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.PESO_HABITUAL)
+                @Html.ValidationMessageFor(model => model.PESO_HABITUAL)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.PORC_ADEQUADO, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.PORC_ADEQUADO)
+                @Html.ValidationMessageFor(model => model.PORC_ADEQUADO)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ALTURA, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ALTURA)
+                @Html.ValidationMessageFor(model => model.ALTURA)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.IMC, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.IMC)
+                @Html.ValidationMessageFor(model => model.IMC)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CLASSIFICACAO, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CLASSIFICACAO)
+                @Html.ValidationMessageFor(model => model.CLASSIFICACAO)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

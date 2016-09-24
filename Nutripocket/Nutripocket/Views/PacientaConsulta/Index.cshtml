@@ -1,0 +1,69 @@
+﻿@model IEnumerable<Nutripocket.Models.PACIENTE_CONSULTA>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ANM_CLINICA.DISFAGIA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ANM_DADOSGERAIS.MASTIGACAO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ANTECEDENTES_FAMILIARES.HIPERTENSAO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ANTROPOMETRIA.PESO_ATUAL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.APARENCIA.AP_FACE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EX_LABORA.HERMOGRAMA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PACIENTE.NOME)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ANM_CLINICA.DISFAGIA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ANM_DADOSGERAIS.MASTIGACAO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ANTECEDENTES_FAMILIARES.HIPERTENSAO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ANTROPOMETRIA.PESO_ATUAL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.APARENCIA.AP_FACE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EX_LABORA.HERMOGRAMA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PACIENTE.NOME)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

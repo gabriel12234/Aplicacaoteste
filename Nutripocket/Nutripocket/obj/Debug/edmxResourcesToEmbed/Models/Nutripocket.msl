@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="NutriPocketModelStoreContainer" CdmEntityContainer="NutriPocketEntities">
+    <EntitySetMapping Name="ANM_CLINICA">
+      <EntityTypeMapping TypeName="NutriPocketModel.ANM_CLINICA">
+        <MappingFragment StoreEntitySet="ANM_CLINICA">
+          <ScalarProperty Name="ID_CLINICA" ColumnName="ID_CLINICA" />
+          <ScalarProperty Name="ID_PACIENTE" ColumnName="ID_PACIENTE" />
+          <ScalarProperty Name="DISFAGIA" ColumnName="DISFAGIA" />
+          <ScalarProperty Name="CONSTIPACAO" ColumnName="CONSTIPACAO" />
+          <ScalarProperty Name="VOMITOS" ColumnName="VOMITOS" />
+          <ScalarProperty Name="ANOREXIA" ColumnName="ANOREXIA" />
+          <ScalarProperty Name="H_PILORI" ColumnName="H_PILORI" />
+          <ScalarProperty Name="PIROSE" ColumnName="PIROSE" />
+          <ScalarProperty Name="ODINOFAGIA" ColumnName="ODINOFAGIA" />
+          <ScalarProperty Name="DIARREIA" ColumnName="DIARREIA" />
+          <ScalarProperty Name="FLATULENCIA" ColumnName="FLATULENCIA" />
+          <ScalarProperty Name="NAUSEAS" ColumnName="NAUSEAS" />
+          <ScalarProperty Name="PROB_RESP" ColumnName="PROB_RESP" />
+          <ScalarProperty Name="GRIPES" ColumnName="GRIPES" />
+          <ScalarProperty Name="HEPS" ColumnName="HEPS" />
+          <ScalarProperty Name="AFTA" ColumnName="AFTA" />
+          <ScalarProperty Name="FADIGA" ColumnName="FADIGA" />
+          <ScalarProperty Name="VISAO_BORRADA" ColumnName="VISAO_BORRADA" />
+          <ScalarProperty Name="DORES_ARTICULACAO" ColumnName="DORES_ARTICULACAO" />
+          <ScalarProperty Name="MUDANCA_HUMOR" ColumnName="MUDANCA_HUMOR" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ANM_DADOSGERAIS">
+      <EntityTypeMapping TypeName="NutriPocketModel.ANM_DADOSGERAIS">
+        <MappingFragment StoreEntitySet="ANM_DADOSGERAIS">
+          <ScalarProperty Name="ID_DADOSGERAIS" ColumnName="ID_DADOSGERAIS" />
+          <ScalarProperty Name="ID_PACIENTE" ColumnName="ID_PACIENTE" />
+          <ScalarProperty Name="MASTIGACAO" ColumnName="MASTIGACAO" />
+          <ScalarProperty Name="DENTICAO" ColumnName="DENTICAO" />
+          <ScalarProperty Name="ALERGIA" ColumnName="ALERGIA" />
+          <ScalarProperty Name="AVERSOES" ColumnName="AVERSOES" />
+          <ScalarProperty Name="ALM_PREFERIDOS" ColumnName="ALM_PREFERIDOS" />
+          <ScalarProperty Name="TP_ACUCAR" ColumnName="TP_ACUCAR" />
+          <ScalarProperty Name="OUTROS_ACUCAR" ColumnName="OUTROS_ACUCAR" />
+          <ScalarProperty Name="HR_MAIS_FOME" ColumnName="HR_MAIS_FOME" />
+          <ScalarProperty Name="TABAGISMO" ColumnName="TABAGISMO" />
+          <ScalarProperty Name="ETILISMO" ColumnName="ETILISMO" />
+          <ScalarProperty Name="FARMACOS" ColumnName="FARMACOS" />
+          <ScalarProperty Name="ATVD_FISICA" ColumnName="ATVD_FISICA" />
+          <ScalarProperty Name="FREQ_ATVD_FISICA" ColumnName="FREQ_ATVD_FISICA" />
+          <ScalarProperty Name="ING_HIDRICA" ColumnName="ING_HIDRICA" />
+          <ScalarProperty Name="HAB_INTESTINAL" ColumnName="HAB_INTESTINAL" />
+          <ScalarProperty Name="ESCALA_BRISTOL" ColumnName="ESCALA_BRISTOL" />
+          <ScalarProperty Name="TRATAMENTOS" ColumnName="TRATAMENTOS" />
+          <ScalarProperty Name="PROB_TRATAMENTO" ColumnName="PROB_TRATAMENTO" />
+          <ScalarProperty Name="TEMPERAMENTO" ColumnName="TEMPERAMENTO" />
+          <ScalarProperty Name="HR_SONO" ColumnName="HR_SONO" />
+          <ScalarProperty Name="CON_TRABALHO" ColumnName="CON_TRABALHO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ANTECEDENTES_FAMILIARES">
+      <EntityTypeMapping TypeName="NutriPocketModel.ANTECEDENTES_FAMILIARES">
+        <MappingFragment StoreEntitySet="ANTECEDENTES_FAMILIARES">
+          <ScalarProperty Name="ID_ANTECEDENTES" ColumnName="ID_ANTECEDENTES" />
+          <ScalarProperty Name="ID_PACIENTE" ColumnName="ID_PACIENTE" />
+          <ScalarProperty Name="HIPERTENSAO" ColumnName="HIPERTENSAO" />
+          <ScalarProperty Name="OBESIDADE" ColumnName="OBESIDADE" />
+          <ScalarProperty Name="CANCER" ColumnName="CANCER" />
+          <ScalarProperty Name="DIABETES" ColumnName="DIABETES" />
+          <ScalarProperty Name="DCV" ColumnName="DCV" />
+          <ScalarProperty Name="DISLIPIDEMIA" ColumnName="DISLIPIDEMIA" />
+          <ScalarProperty Name="AVC" ColumnName="AVC" />
+          <ScalarProperty Name="ANEMIA" ColumnName="ANEMIA" />
+          <ScalarProperty Name="OUTROS" ColumnName="OUTROS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ANTROPOMETRIA">
+      <EntityTypeMapping TypeName="NutriPocketModel.ANTROPOMETRIA">
+        <MappingFragment StoreEntitySet="ANTROPOMETRIA">
+          <ScalarProperty Name="ID_ANTRO" ColumnName="ID_ANTRO" />
+          <ScalarProperty Name="ID_PACIENTE" ColumnName="ID_PACIENTE" />
+          <ScalarProperty Name="PESO_ATUAL" ColumnName="PESO_ATUAL" />
+          <ScalarProperty Name="PESO_HABITUAL" ColumnName="PESO_HABITUAL" />
+          <ScalarProperty Name="PORC_ADEQUADO" ColumnName="PORC_ADEQUADO" />
+          <ScalarProperty Name="ALTURA" ColumnName="ALTURA" />
+          <ScalarProperty Name="IMC" ColumnName="IMC" />
+          <ScalarProperty Name="CLASSIFICACAO" ColumnName="CLASSIFICACAO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="APARENCIA">
+      <EntityTypeMapping TypeName="NutriPocketModel.APARENCIA">
+        <MappingFragment StoreEntitySet="APARENCIA">
+          <ScalarProperty Name="ID_APARENCIA" ColumnName="ID_APARENCIA" />
+          <ScalarProperty Name="ID_PACIENTE" ColumnName="ID_PACIENTE" />
+          <ScalarProperty Name="AP_FACE" ColumnName="AP_FACE" />
+          <ScalarProperty Name="AP_LABIOS" ColumnName="AP_LABIOS" />
+          <ScalarProperty Name="AP_LINGUA" ColumnName="AP_LINGUA" />
+          <ScalarProperty Name="AP_GENGIVA" ColumnName="AP_GENGIVA" />
+          <ScalarProperty Name="AP_PELE" ColumnName="AP_PELE" />
+          <ScalarProperty Name="AP_CABELOS" ColumnName="AP_CABELOS" />
+          <ScalarProperty Name="AP_MUSCULOS" ColumnName="AP_MUSCULOS" />
+          <ScalarProperty Name="AP_TRONCO" ColumnName="AP_TRONCO" />
+          <ScalarProperty Name="AP_MEMBROS" ColumnName="AP_MEMBROS" />
+          <ScalarProperty Name="AP_UNHAS" ColumnName="AP_UNHAS" />
+          <ScalarProperty Name="AP_SIST_NERVOSO" ColumnName="AP_SIST_NERVOSO" />
+          <ScalarProperty Name="AP_PESCOCO" ColumnName="AP_PESCOCO" />
+          <ScalarProperty Name="Attribute145" ColumnName="Attribute145" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EX_LABORA">
+      <EntityTypeMapping TypeName="NutriPocketModel.EX_LABORA">
+        <MappingFragment StoreEntitySet="EX_LABORA">
+          <ScalarProperty Name="ID_EX_LABORA" ColumnName="ID_EX_LABORA" />
+          <ScalarProperty Name="ID_PACIENTE" ColumnName="ID_PACIENTE" />
+          <ScalarProperty Name="HERMOGRAMA" ColumnName="HERMOGRAMA" />
+          <ScalarProperty Name="TRIGLICERIDIOS" ColumnName="TRIGLICERIDIOS" />
+          <ScalarProperty Name="PRESSAO_ARTERIAL" ColumnName="PRESSAO_ARTERIAL" />
+          <ScalarProperty Name="GLICEMIA" ColumnName="GLICEMIA" />
+          <ScalarProperty Name="COLESTEROL" ColumnName="COLESTEROL" />
+          <ScalarProperty Name="PARASITOLOGICO" ColumnName="PARASITOLOGICO" />
+          <ScalarProperty Name="CORTISOL" ColumnName="CORTISOL" />
+          <ScalarProperty Name="OUTROS" ColumnName="OUTROS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FREQ_ALIMENTAR">
+      <EntityTypeMapping TypeName="NutriPocketModel.FREQ_ALIMENTAR">
+        <MappingFragment StoreEntitySet="FREQ_ALIMENTAR">
+          <ScalarProperty Name="ID_FREQUENCIA" ColumnName="ID_FREQUENCIA" />
+          <ScalarProperty Name="ID_PERIODO" ColumnName="ID_PERIODO" />
+          <ScalarProperty Name="ID_PACIENTE" ColumnName="ID_PACIENTE" />
+          <ScalarProperty Name="DESC_ALIMENTO" ColumnName="DESC_ALIMENTO" />
+          <ScalarProperty Name="QTD_ALIMENTO" ColumnName="QTD_ALIMENTO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NUTRICIONISTA">
+      <EntityTypeMapping TypeName="NutriPocketModel.NUTRICIONISTA">
+        <MappingFragment StoreEntitySet="NUTRICIONISTA">
+          <ScalarProperty Name="ID_NUTRICIONISTA" ColumnName="ID_NUTRICIONISTA" />
+          <ScalarProperty Name="NUT_NOME" ColumnName="NUT_NOME" />
+          <ScalarProperty Name="NUT_SEXO" ColumnName="NUT_SEXO" />
+          <ScalarProperty Name="NUT_EMAIL" ColumnName="NUT_EMAIL" />
+          <ScalarProperty Name="NUT_CRN" ColumnName="NUT_CRN" />
+          <ScalarProperty Name="AREA_ATUACAO" ColumnName="AREA_ATUACAO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PACIENTE">
+      <EntityTypeMapping TypeName="NutriPocketModel.PACIENTE">
+        <MappingFragment StoreEntitySet="PACIENTE">
+          <ScalarProperty Name="ID_PACIENTE" ColumnName="ID_PACIENTE" />
+          <ScalarProperty Name="NOME" ColumnName="NOME" />
+          <ScalarProperty Name="SEXO" ColumnName="SEXO" />
+          <ScalarProperty Name="DT_NASC" ColumnName="DT_NASC" />
+          <ScalarProperty Name="EST_CIVIL" ColumnName="EST_CIVIL" />
+          <ScalarProperty Name="PROFISSAO" ColumnName="PROFISSAO" />
+          <ScalarProperty Name="ENDERECO" ColumnName="ENDERECO" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="TELEFONE" ColumnName="TELEFONE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PACIENTE_CONSULTA">
+      <EntityTypeMapping TypeName="NutriPocketModel.PACIENTE_CONSULTA">
+        <MappingFragment StoreEntitySet="PACIENTE_CONSULTA">
+          <ScalarProperty Name="ID_CONSULTA" ColumnName="ID_CONSULTA" />
+          <ScalarProperty Name="ID_PACIENTE" ColumnName="ID_PACIENTE" />
+          <ScalarProperty Name="ID_ANTRO" ColumnName="ID_ANTRO" />
+          <ScalarProperty Name="ID_ANTECEDENTES" ColumnName="ID_ANTECEDENTES" />
+          <ScalarProperty Name="ID_DADOSGERAIS" ColumnName="ID_DADOSGERAIS" />
+          <ScalarProperty Name="ID_CLINICA" ColumnName="ID_CLINICA" />
+          <ScalarProperty Name="ID_APARENCIA" ColumnName="ID_APARENCIA" />
+          <ScalarProperty Name="ID_EX_LABORA" ColumnName="ID_EX_LABORA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PERIODICIDADE">
+      <EntityTypeMapping TypeName="NutriPocketModel.PERIODICIDADE">
+        <MappingFragment StoreEntitySet="PERIODICIDADE">
+          <ScalarProperty Name="ID_PERIODO" ColumnName="ID_PERIODO" />
+          <ScalarProperty Name="DESC_PERIODO" ColumnName="DESC_PERIODO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RECEITAS">
+      <EntityTypeMapping TypeName="NutriPocketModel.RECEITAS">
+        <MappingFragment StoreEntitySet="RECEITAS">
+          <ScalarProperty Name="ID_PACIENTE" ColumnName="ID_PACIENTE" />
+          <ScalarProperty Name="ID_RECEITA" ColumnName="ID_RECEITA" />
+          <ScalarProperty Name="TITULO" ColumnName="TITULO" />
+          <ScalarProperty Name="CATEGORIA" ColumnName="CATEGORIA" />
+          <ScalarProperty Name="MODO_PREPARO" ColumnName="MODO_PREPARO" />
+          <ScalarProperty Name="INGREDIENTES" ColumnName="INGREDIENTES" />
+          <ScalarProperty Name="FOTO_RECEITA" ColumnName="FOTO_RECEITA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RECOR_ALIMENTACAO">
+      <EntityTypeMapping TypeName="NutriPocketModel.RECOR_ALIMENTACAO">
+        <MappingFragment StoreEntitySet="RECOR_ALIMENTACAO">
+          <ScalarProperty Name="ID_PERIODO" ColumnName="ID_PERIODO" />
+          <ScalarProperty Name="DESC_ALIMENTO" ColumnName="DESC_ALIMENTO" />
+          <ScalarProperty Name="QTD_ALIMENTO" ColumnName="QTD_ALIMENTO" />
+          <ScalarProperty Name="HORARIO" ColumnName="HORARIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

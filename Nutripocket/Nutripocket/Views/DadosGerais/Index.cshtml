@@ -1,0 +1,159 @@
+﻿@model IEnumerable<Nutripocket.Models.ANM_DADOSGERAIS>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MASTIGACAO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DENTICAO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ALERGIA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AVERSOES)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ALM_PREFERIDOS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TP_ACUCAR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OUTROS_ACUCAR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HR_MAIS_FOME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TABAGISMO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ETILISMO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FARMACOS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ATVD_FISICA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FREQ_ATVD_FISICA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ING_HIDRICA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HAB_INTESTINAL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ESCALA_BRISTOL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TRATAMENTOS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PROB_TRATAMENTO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TEMPERAMENTO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HR_SONO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CON_TRABALHO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PACIENTE.NOME)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MASTIGACAO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DENTICAO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ALERGIA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AVERSOES)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ALM_PREFERIDOS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TP_ACUCAR)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OUTROS_ACUCAR)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HR_MAIS_FOME)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TABAGISMO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ETILISMO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FARMACOS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ATVD_FISICA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FREQ_ATVD_FISICA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ING_HIDRICA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HAB_INTESTINAL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ESCALA_BRISTOL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TRATAMENTOS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PROB_TRATAMENTO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TEMPERAMENTO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HR_SONO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CON_TRABALHO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PACIENTE.NOME)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

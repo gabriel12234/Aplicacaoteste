@@ -1,0 +1,111 @@
+﻿@model IEnumerable<Nutripocket.Models.APARENCIA>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.AP_FACE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AP_LABIOS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AP_LINGUA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AP_GENGIVA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AP_PELE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AP_CABELOS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AP_MUSCULOS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AP_TRONCO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AP_MEMBROS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AP_UNHAS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AP_SIST_NERVOSO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AP_PESCOCO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Attribute145)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PACIENTE.NOME)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.AP_FACE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AP_LABIOS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AP_LINGUA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AP_GENGIVA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AP_PELE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AP_CABELOS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AP_MUSCULOS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AP_TRONCO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AP_MEMBROS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AP_UNHAS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AP_SIST_NERVOSO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AP_PESCOCO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Attribute145)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PACIENTE.NOME)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

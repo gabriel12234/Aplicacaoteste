@@ -1,0 +1,1295 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="NutriPocketModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ANM_CLINICA">
+          <Key>
+            <PropertyRef Name="ID_CLINICA" />
+            <PropertyRef Name="ID_PACIENTE" />
+          </Key>
+          <Property Name="ID_CLINICA" Type="int" Nullable="false" />
+          <Property Name="ID_PACIENTE" Type="int" Nullable="false" />
+          <Property Name="DISFAGIA" Type="varchar" MaxLength="1" />
+          <Property Name="CONSTIPACAO" Type="varchar" MaxLength="1" />
+          <Property Name="VOMITOS" Type="varchar" MaxLength="1" />
+          <Property Name="ANOREXIA" Type="varchar" MaxLength="1" />
+          <Property Name="H_PILORI" Type="varchar" MaxLength="1" />
+          <Property Name="PIROSE" Type="varchar" MaxLength="1" />
+          <Property Name="ODINOFAGIA" Type="varchar" MaxLength="1" />
+          <Property Name="DIARREIA" Type="varchar" MaxLength="1" />
+          <Property Name="FLATULENCIA" Type="varchar" MaxLength="1" />
+          <Property Name="NAUSEAS" Type="varchar" MaxLength="1" />
+          <Property Name="PROB_RESP" Type="varchar" MaxLength="1" />
+          <Property Name="GRIPES" Type="varchar" MaxLength="1" />
+          <Property Name="HEPS" Type="varchar" MaxLength="1" />
+          <Property Name="AFTA" Type="varchar" MaxLength="1" />
+          <Property Name="FADIGA" Type="varchar" MaxLength="1" />
+          <Property Name="VISAO_BORRADA" Type="varchar" MaxLength="1" />
+          <Property Name="DORES_ARTICULACAO" Type="varchar" MaxLength="1" />
+          <Property Name="MUDANCA_HUMOR" Type="varchar" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="ANM_DADOSGERAIS">
+          <Key>
+            <PropertyRef Name="ID_DADOSGERAIS" />
+            <PropertyRef Name="ID_PACIENTE" />
+          </Key>
+          <Property Name="ID_DADOSGERAIS" Type="int" Nullable="false" />
+          <Property Name="ID_PACIENTE" Type="int" Nullable="false" />
+          <Property Name="MASTIGACAO" Type="varchar" MaxLength="1" />
+          <Property Name="DENTICAO" Type="varchar" MaxLength="1" />
+          <Property Name="ALERGIA" Type="varchar" MaxLength="30" />
+          <Property Name="AVERSOES" Type="varchar" MaxLength="50" />
+          <Property Name="ALM_PREFERIDOS" Type="varchar" MaxLength="30" />
+          <Property Name="TP_ACUCAR" Type="varchar" MaxLength="10" />
+          <Property Name="OUTROS_ACUCAR" Type="varchar" MaxLength="10" />
+          <Property Name="HR_MAIS_FOME" Type="varchar" MaxLength="10" />
+          <Property Name="TABAGISMO" Type="varchar" MaxLength="1" />
+          <Property Name="ETILISMO" Type="varchar" MaxLength="1" />
+          <Property Name="FARMACOS" Type="varchar" MaxLength="20" />
+          <Property Name="ATVD_FISICA" Type="varchar" MaxLength="20" />
+          <Property Name="FREQ_ATVD_FISICA" Type="varchar" MaxLength="20" />
+          <Property Name="ING_HIDRICA" Type="varchar" MaxLength="20" />
+          <Property Name="HAB_INTESTINAL" Type="varchar" MaxLength="20" />
+          <Property Name="ESCALA_BRISTOL" Type="varchar" MaxLength="20" />
+          <Property Name="TRATAMENTOS" Type="varchar" MaxLength="30" />
+          <Property Name="PROB_TRATAMENTO" Type="varchar" MaxLength="20" />
+          <Property Name="TEMPERAMENTO" Type="varchar" MaxLength="10" />
+          <Property Name="HR_SONO" Type="varchar" MaxLength="10" />
+          <Property Name="CON_TRABALHO" Type="varchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="ANTECEDENTES_FAMILIARES">
+          <Key>
+            <PropertyRef Name="ID_ANTECEDENTES" />
+            <PropertyRef Name="ID_PACIENTE" />
+          </Key>
+          <Property Name="ID_ANTECEDENTES" Type="int" Nullable="false" />
+          <Property Name="ID_PACIENTE" Type="int" Nullable="false" />
+          <Property Name="HIPERTENSAO" Type="varchar" MaxLength="1" />
+          <Property Name="OBESIDADE" Type="varchar" MaxLength="1" />
+          <Property Name="CANCER" Type="varchar" MaxLength="1" />
+          <Property Name="DIABETES" Type="varchar" MaxLength="1" />
+          <Property Name="DCV" Type="varchar" MaxLength="1" />
+          <Property Name="DISLIPIDEMIA" Type="varchar" MaxLength="1" />
+          <Property Name="AVC" Type="varchar" MaxLength="1" />
+          <Property Name="ANEMIA" Type="varchar" MaxLength="1" />
+          <Property Name="OUTROS" Type="varchar" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="ANTROPOMETRIA">
+          <Key>
+            <PropertyRef Name="ID_ANTRO" />
+            <PropertyRef Name="ID_PACIENTE" />
+          </Key>
+          <Property Name="ID_ANTRO" Type="int" Nullable="false" />
+          <Property Name="ID_PACIENTE" Type="int" Nullable="false" />
+          <Property Name="PESO_ATUAL" Type="varchar" MaxLength="10" />
+          <Property Name="PESO_HABITUAL" Type="varchar" MaxLength="10" />
+          <Property Name="PORC_ADEQUADO" Type="varchar" MaxLength="10" />
+          <Property Name="ALTURA" Type="varchar" MaxLength="10" />
+          <Property Name="IMC" Type="varchar" MaxLength="10" />
+          <Property Name="CLASSIFICACAO" Type="varchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="APARENCIA">
+          <Key>
+            <PropertyRef Name="ID_APARENCIA" />
+            <PropertyRef Name="ID_PACIENTE" />
+          </Key>
+          <Property Name="ID_APARENCIA" Type="int" Nullable="false" />
+          <Property Name="ID_PACIENTE" Type="int" Nullable="false" />
+          <Property Name="AP_FACE" Type="varchar" MaxLength="15" />
+          <Property Name="AP_LABIOS" Type="varchar" MaxLength="15" />
+          <Property Name="AP_LINGUA" Type="varchar" MaxLength="15" />
+          <Property Name="AP_GENGIVA" Type="varchar" MaxLength="15" />
+          <Property Name="AP_PELE" Type="varchar" MaxLength="15" />
+          <Property Name="AP_CABELOS" Type="varchar" MaxLength="15" />
+          <Property Name="AP_MUSCULOS" Type="varchar" MaxLength="15" />
+          <Property Name="AP_TRONCO" Type="varchar" MaxLength="15" />
+          <Property Name="AP_MEMBROS" Type="varchar" MaxLength="15" />
+          <Property Name="AP_UNHAS" Type="varchar" MaxLength="15" />
+          <Property Name="AP_SIST_NERVOSO" Type="varchar" MaxLength="15" />
+          <Property Name="AP_PESCOCO" Type="varchar" MaxLength="15" />
+          <Property Name="Attribute145" Type="char" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="EX_LABORA">
+          <Key>
+            <PropertyRef Name="ID_EX_LABORA" />
+            <PropertyRef Name="ID_PACIENTE" />
+          </Key>
+          <Property Name="ID_EX_LABORA" Type="int" Nullable="false" />
+          <Property Name="ID_PACIENTE" Type="int" Nullable="false" />
+          <Property Name="HERMOGRAMA" Type="varchar" MaxLength="10" />
+          <Property Name="TRIGLICERIDIOS" Type="varchar" MaxLength="10" />
+          <Property Name="PRESSAO_ARTERIAL" Type="varchar" MaxLength="10" />
+          <Property Name="GLICEMIA" Type="varchar" MaxLength="10" />
+          <Property Name="COLESTEROL" Type="varchar" MaxLength="10" />
+          <Property Name="PARASITOLOGICO" Type="varchar" MaxLength="10" />
+          <Property Name="CORTISOL" Type="varchar" MaxLength="10" />
+          <Property Name="OUTROS" Type="varchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="FREQ_ALIMENTAR">
+          <Key>
+            <PropertyRef Name="ID_FREQUENCIA" />
+            <PropertyRef Name="ID_PERIODO" />
+            <PropertyRef Name="ID_PACIENTE" />
+          </Key>
+          <Property Name="ID_FREQUENCIA" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="ID_PERIODO" Type="int" Nullable="false" />
+          <Property Name="ID_PACIENTE" Type="int" Nullable="false" />
+          <Property Name="DESC_ALIMENTO" Type="char" MaxLength="10" />
+          <Property Name="QTD_ALIMENTO" Type="char" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="NUTRICIONISTA">
+          <Key>
+            <PropertyRef Name="ID_NUTRICIONISTA" />
+          </Key>
+          <Property Name="ID_NUTRICIONISTA" Type="int" Nullable="false" />
+          <Property Name="NUT_NOME" Type="varchar" MaxLength="32" />
+          <Property Name="NUT_SEXO" Type="varchar" MaxLength="1" />
+          <Property Name="NUT_EMAIL" Type="varchar" MaxLength="15" />
+          <Property Name="NUT_CRN" Type="varchar" MaxLength="15" />
+          <Property Name="AREA_ATUACAO" Type="varchar" MaxLength="15" />
+        </EntityType>
+        <EntityType Name="PACIENTE">
+          <Key>
+            <PropertyRef Name="ID_PACIENTE" />
+          </Key>
+          <Property Name="ID_PACIENTE" Type="int" Nullable="false" />
+          <Property Name="NOME" Type="varchar" MaxLength="32" />
+          <Property Name="SEXO" Type="varchar" MaxLength="1" />
+          <Property Name="DT_NASC" Type="date" />
+          <Property Name="EST_CIVIL" Type="varchar" MaxLength="10" />
+          <Property Name="PROFISSAO" Type="varchar" MaxLength="10" />
+          <Property Name="ENDERECO" Type="varchar" MaxLength="40" />
+          <Property Name="EMAIL" Type="varchar" MaxLength="25" />
+          <Property Name="TELEFONE" Type="varchar" MaxLength="14" />
+        </EntityType>
+        <EntityType Name="PACIENTE_CONSULTA">
+          <Key>
+            <PropertyRef Name="ID_CONSULTA" />
+            <PropertyRef Name="ID_PACIENTE" />
+            <PropertyRef Name="ID_ANTRO" />
+            <PropertyRef Name="ID_ANTECEDENTES" />
+            <PropertyRef Name="ID_DADOSGERAIS" />
+            <PropertyRef Name="ID_CLINICA" />
+            <PropertyRef Name="ID_APARENCIA" />
+            <PropertyRef Name="ID_EX_LABORA" />
+          </Key>
+          <Property Name="ID_CONSULTA" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="ID_PACIENTE" Type="int" Nullable="false" />
+          <Property Name="ID_ANTRO" Type="int" Nullable="false" />
+          <Property Name="ID_ANTECEDENTES" Type="int" Nullable="false" />
+          <Property Name="ID_DADOSGERAIS" Type="int" Nullable="false" />
+          <Property Name="ID_CLINICA" Type="int" Nullable="false" />
+          <Property Name="ID_APARENCIA" Type="int" Nullable="false" />
+          <Property Name="ID_EX_LABORA" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PERIODICIDADE">
+          <Key>
+            <PropertyRef Name="ID_PERIODO" />
+          </Key>
+          <Property Name="ID_PERIODO" Type="int" Nullable="false" />
+          <Property Name="DESC_PERIODO" Type="varchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="RECEITAS">
+          <Key>
+            <PropertyRef Name="ID_RECEITA" />
+          </Key>
+          <Property Name="ID_RECEITA" Type="int" Nullable="false" />
+          <Property Name="TITULO" Type="varchar" MaxLength="25" />
+          <Property Name="CATEGORIA" Type="varchar" MaxLength="15" />
+          <Property Name="MODO_PREPARO" Type="varchar" MaxLength="500" />
+          <Property Name="INGREDIENTES" Type="varchar" MaxLength="200" />
+          <Property Name="FOTO_RECEITA" Type="bit" />
+          <Property Name="ID_PACIENTE" Type="int" />
+        </EntityType>
+        <EntityType Name="RECOR_ALIMENTACAO">
+          <Key>
+            <PropertyRef Name="ID_PERIODO" />
+          </Key>
+          <Property Name="ID_PERIODO" Type="int" Nullable="false" />
+          <Property Name="DESC_ALIMENTO" Type="varchar" MaxLength="10" />
+          <Property Name="QTD_ALIMENTO" Type="varchar" MaxLength="10" />
+          <Property Name="HORARIO" Type="varchar" MaxLength="10" />
+        </EntityType>
+        <Association Name="FK_ANM_CLINICA_0">
+          <End Role="PACIENTE" Type="Self.PACIENTE" Multiplicity="1" />
+          <End Role="ANM_CLINICA" Type="Self.ANM_CLINICA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PACIENTE">
+              <PropertyRef Name="ID_PACIENTE" />
+            </Principal>
+            <Dependent Role="ANM_CLINICA">
+              <PropertyRef Name="ID_PACIENTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ANM_DADOSGERAIS_0">
+          <End Role="PACIENTE" Type="Self.PACIENTE" Multiplicity="1" />
+          <End Role="ANM_DADOSGERAIS" Type="Self.ANM_DADOSGERAIS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PACIENTE">
+              <PropertyRef Name="ID_PACIENTE" />
+            </Principal>
+            <Dependent Role="ANM_DADOSGERAIS">
+              <PropertyRef Name="ID_PACIENTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ANTECEDENTES_FAMILIARES_0">
+          <End Role="PACIENTE" Type="Self.PACIENTE" Multiplicity="1" />
+          <End Role="ANTECEDENTES_FAMILIARES" Type="Self.ANTECEDENTES_FAMILIARES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PACIENTE">
+              <PropertyRef Name="ID_PACIENTE" />
+            </Principal>
+            <Dependent Role="ANTECEDENTES_FAMILIARES">
+              <PropertyRef Name="ID_PACIENTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ANTROPOMETRIA_0">
+          <End Role="PACIENTE" Type="Self.PACIENTE" Multiplicity="1" />
+          <End Role="ANTROPOMETRIA" Type="Self.ANTROPOMETRIA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PACIENTE">
+              <PropertyRef Name="ID_PACIENTE" />
+            </Principal>
+            <Dependent Role="ANTROPOMETRIA">
+              <PropertyRef Name="ID_PACIENTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_APARENCIA_0">
+          <End Role="PACIENTE" Type="Self.PACIENTE" Multiplicity="1" />
+          <End Role="APARENCIA" Type="Self.APARENCIA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PACIENTE">
+              <PropertyRef Name="ID_PACIENTE" />
+            </Principal>
+            <Dependent Role="APARENCIA">
+              <PropertyRef Name="ID_PACIENTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EX_LABORA_0">
+          <End Role="PACIENTE" Type="Self.PACIENTE" Multiplicity="1" />
+          <End Role="EX_LABORA" Type="Self.EX_LABORA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PACIENTE">
+              <PropertyRef Name="ID_PACIENTE" />
+            </Principal>
+            <Dependent Role="EX_LABORA">
+              <PropertyRef Name="ID_PACIENTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FREQ_ALIMENTAR_0">
+          <End Role="PERIODICIDADE" Type="Self.PERIODICIDADE" Multiplicity="1" />
+          <End Role="FREQ_ALIMENTAR" Type="Self.FREQ_ALIMENTAR" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PERIODICIDADE">
+              <PropertyRef Name="ID_PERIODO" />
+            </Principal>
+            <Dependent Role="FREQ_ALIMENTAR">
+              <PropertyRef Name="ID_PERIODO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FREQ_ALIMENTAR_1">
+          <End Role="PACIENTE" Type="Self.PACIENTE" Multiplicity="1" />
+          <End Role="FREQ_ALIMENTAR" Type="Self.FREQ_ALIMENTAR" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PACIENTE">
+              <PropertyRef Name="ID_PACIENTE" />
+            </Principal>
+            <Dependent Role="FREQ_ALIMENTAR">
+              <PropertyRef Name="ID_PACIENTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PACIENTE_CONSULTA_0">
+          <End Role="PACIENTE" Type="Self.PACIENTE" Multiplicity="1" />
+          <End Role="PACIENTE_CONSULTA" Type="Self.PACIENTE_CONSULTA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PACIENTE">
+              <PropertyRef Name="ID_PACIENTE" />
+            </Principal>
+            <Dependent Role="PACIENTE_CONSULTA">
+              <PropertyRef Name="ID_PACIENTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PACIENTE_CONSULTA_1">
+          <End Role="ANTECEDENTES_FAMILIARES" Type="Self.ANTECEDENTES_FAMILIARES" Multiplicity="1" />
+          <End Role="PACIENTE_CONSULTA" Type="Self.PACIENTE_CONSULTA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ANTECEDENTES_FAMILIARES">
+              <PropertyRef Name="ID_ANTECEDENTES" />
+              <PropertyRef Name="ID_PACIENTE" />
+            </Principal>
+            <Dependent Role="PACIENTE_CONSULTA">
+              <PropertyRef Name="ID_ANTECEDENTES" />
+              <PropertyRef Name="ID_PACIENTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PACIENTE_CONSULTA_2">
+          <End Role="ANTROPOMETRIA" Type="Self.ANTROPOMETRIA" Multiplicity="1" />
+          <End Role="PACIENTE_CONSULTA" Type="Self.PACIENTE_CONSULTA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ANTROPOMETRIA">
+              <PropertyRef Name="ID_ANTRO" />
+              <PropertyRef Name="ID_PACIENTE" />
+            </Principal>
+            <Dependent Role="PACIENTE_CONSULTA">
+              <PropertyRef Name="ID_ANTRO" />
+              <PropertyRef Name="ID_PACIENTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PACIENTE_CONSULTA_3">
+          <End Role="ANM_DADOSGERAIS" Type="Self.ANM_DADOSGERAIS" Multiplicity="1" />
+          <End Role="PACIENTE_CONSULTA" Type="Self.PACIENTE_CONSULTA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ANM_DADOSGERAIS">
+              <PropertyRef Name="ID_DADOSGERAIS" />
+              <PropertyRef Name="ID_PACIENTE" />
+            </Principal>
+            <Dependent Role="PACIENTE_CONSULTA">
+              <PropertyRef Name="ID_DADOSGERAIS" />
+              <PropertyRef Name="ID_PACIENTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PACIENTE_CONSULTA_4">
+          <End Role="ANM_CLINICA" Type="Self.ANM_CLINICA" Multiplicity="1" />
+          <End Role="PACIENTE_CONSULTA" Type="Self.PACIENTE_CONSULTA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ANM_CLINICA">
+              <PropertyRef Name="ID_CLINICA" />
+              <PropertyRef Name="ID_PACIENTE" />
+            </Principal>
+            <Dependent Role="PACIENTE_CONSULTA">
+              <PropertyRef Name="ID_CLINICA" />
+              <PropertyRef Name="ID_PACIENTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PACIENTE_CONSULTA_5">
+          <End Role="APARENCIA" Type="Self.APARENCIA" Multiplicity="1" />
+          <End Role="PACIENTE_CONSULTA" Type="Self.PACIENTE_CONSULTA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="APARENCIA">
+              <PropertyRef Name="ID_APARENCIA" />
+              <PropertyRef Name="ID_PACIENTE" />
+            </Principal>
+            <Dependent Role="PACIENTE_CONSULTA">
+              <PropertyRef Name="ID_APARENCIA" />
+              <PropertyRef Name="ID_PACIENTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PACIENTE_CONSULTA_6">
+          <End Role="EX_LABORA" Type="Self.EX_LABORA" Multiplicity="1" />
+          <End Role="PACIENTE_CONSULTA" Type="Self.PACIENTE_CONSULTA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EX_LABORA">
+              <PropertyRef Name="ID_EX_LABORA" />
+              <PropertyRef Name="ID_PACIENTE" />
+            </Principal>
+            <Dependent Role="PACIENTE_CONSULTA">
+              <PropertyRef Name="ID_EX_LABORA" />
+              <PropertyRef Name="ID_PACIENTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RECEITAS_PACIENTE">
+          <End Role="PACIENTE" Type="Self.PACIENTE" Multiplicity="0..1" />
+          <End Role="RECEITAS" Type="Self.RECEITAS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PACIENTE">
+              <PropertyRef Name="ID_PACIENTE" />
+            </Principal>
+            <Dependent Role="RECEITAS">
+              <PropertyRef Name="ID_PACIENTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RECOR_ALIMENTACAO_0">
+          <End Role="PERIODICIDADE" Type="Self.PERIODICIDADE" Multiplicity="1" />
+          <End Role="RECOR_ALIMENTACAO" Type="Self.RECOR_ALIMENTACAO" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="PERIODICIDADE">
+              <PropertyRef Name="ID_PERIODO" />
+            </Principal>
+            <Dependent Role="RECOR_ALIMENTACAO">
+              <PropertyRef Name="ID_PERIODO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="NutriPocketModelStoreContainer">
+          <EntitySet Name="ANM_CLINICA" EntityType="Self.ANM_CLINICA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ANM_DADOSGERAIS" EntityType="Self.ANM_DADOSGERAIS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ANTECEDENTES_FAMILIARES" EntityType="Self.ANTECEDENTES_FAMILIARES" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ANTROPOMETRIA" EntityType="Self.ANTROPOMETRIA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="APARENCIA" EntityType="Self.APARENCIA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EX_LABORA" EntityType="Self.EX_LABORA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FREQ_ALIMENTAR" EntityType="Self.FREQ_ALIMENTAR" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NUTRICIONISTA" EntityType="Self.NUTRICIONISTA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PACIENTE" EntityType="Self.PACIENTE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PACIENTE_CONSULTA" EntityType="Self.PACIENTE_CONSULTA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PERIODICIDADE" EntityType="Self.PERIODICIDADE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RECEITAS" EntityType="Self.RECEITAS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RECOR_ALIMENTACAO" EntityType="Self.RECOR_ALIMENTACAO" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_ANM_CLINICA_0" Association="Self.FK_ANM_CLINICA_0">
+            <End Role="PACIENTE" EntitySet="PACIENTE" />
+            <End Role="ANM_CLINICA" EntitySet="ANM_CLINICA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ANM_DADOSGERAIS_0" Association="Self.FK_ANM_DADOSGERAIS_0">
+            <End Role="PACIENTE" EntitySet="PACIENTE" />
+            <End Role="ANM_DADOSGERAIS" EntitySet="ANM_DADOSGERAIS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ANTECEDENTES_FAMILIARES_0" Association="Self.FK_ANTECEDENTES_FAMILIARES_0">
+            <End Role="PACIENTE" EntitySet="PACIENTE" />
+            <End Role="ANTECEDENTES_FAMILIARES" EntitySet="ANTECEDENTES_FAMILIARES" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ANTROPOMETRIA_0" Association="Self.FK_ANTROPOMETRIA_0">
+            <End Role="PACIENTE" EntitySet="PACIENTE" />
+            <End Role="ANTROPOMETRIA" EntitySet="ANTROPOMETRIA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_APARENCIA_0" Association="Self.FK_APARENCIA_0">
+            <End Role="PACIENTE" EntitySet="PACIENTE" />
+            <End Role="APARENCIA" EntitySet="APARENCIA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EX_LABORA_0" Association="Self.FK_EX_LABORA_0">
+            <End Role="PACIENTE" EntitySet="PACIENTE" />
+            <End Role="EX_LABORA" EntitySet="EX_LABORA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FREQ_ALIMENTAR_0" Association="Self.FK_FREQ_ALIMENTAR_0">
+            <End Role="PERIODICIDADE" EntitySet="PERIODICIDADE" />
+            <End Role="FREQ_ALIMENTAR" EntitySet="FREQ_ALIMENTAR" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FREQ_ALIMENTAR_1" Association="Self.FK_FREQ_ALIMENTAR_1">
+            <End Role="PACIENTE" EntitySet="PACIENTE" />
+            <End Role="FREQ_ALIMENTAR" EntitySet="FREQ_ALIMENTAR" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PACIENTE_CONSULTA_0" Association="Self.FK_PACIENTE_CONSULTA_0">
+            <End Role="PACIENTE" EntitySet="PACIENTE" />
+            <End Role="PACIENTE_CONSULTA" EntitySet="PACIENTE_CONSULTA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PACIENTE_CONSULTA_1" Association="Self.FK_PACIENTE_CONSULTA_1">
+            <End Role="ANTECEDENTES_FAMILIARES" EntitySet="ANTECEDENTES_FAMILIARES" />
+            <End Role="PACIENTE_CONSULTA" EntitySet="PACIENTE_CONSULTA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PACIENTE_CONSULTA_2" Association="Self.FK_PACIENTE_CONSULTA_2">
+            <End Role="ANTROPOMETRIA" EntitySet="ANTROPOMETRIA" />
+            <End Role="PACIENTE_CONSULTA" EntitySet="PACIENTE_CONSULTA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PACIENTE_CONSULTA_3" Association="Self.FK_PACIENTE_CONSULTA_3">
+            <End Role="ANM_DADOSGERAIS" EntitySet="ANM_DADOSGERAIS" />
+            <End Role="PACIENTE_CONSULTA" EntitySet="PACIENTE_CONSULTA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PACIENTE_CONSULTA_4" Association="Self.FK_PACIENTE_CONSULTA_4">
+            <End Role="ANM_CLINICA" EntitySet="ANM_CLINICA" />
+            <End Role="PACIENTE_CONSULTA" EntitySet="PACIENTE_CONSULTA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PACIENTE_CONSULTA_5" Association="Self.FK_PACIENTE_CONSULTA_5">
+            <End Role="APARENCIA" EntitySet="APARENCIA" />
+            <End Role="PACIENTE_CONSULTA" EntitySet="PACIENTE_CONSULTA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PACIENTE_CONSULTA_6" Association="Self.FK_PACIENTE_CONSULTA_6">
+            <End Role="EX_LABORA" EntitySet="EX_LABORA" />
+            <End Role="PACIENTE_CONSULTA" EntitySet="PACIENTE_CONSULTA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RECEITAS_PACIENTE" Association="Self.FK_RECEITAS_PACIENTE">
+            <End Role="PACIENTE" EntitySet="PACIENTE" />
+            <End Role="RECEITAS" EntitySet="RECEITAS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RECOR_ALIMENTACAO_0" Association="Self.FK_RECOR_ALIMENTACAO_0">
+            <End Role="PERIODICIDADE" EntitySet="PERIODICIDADE" />
+            <End Role="RECOR_ALIMENTACAO" EntitySet="RECOR_ALIMENTACAO" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="NutriPocketModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="ANM_CLINICA">
+          <Key>
+            <PropertyRef Name="ID_CLINICA" />
+            <PropertyRef Name="ID_PACIENTE" />
+          </Key>
+          <Property Name="ID_CLINICA" Type="Int32" Nullable="false" />
+          <Property Name="ID_PACIENTE" Type="Int32" Nullable="false" />
+          <Property Name="DISFAGIA" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="CONSTIPACAO" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="VOMITOS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="ANOREXIA" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="H_PILORI" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="PIROSE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="ODINOFAGIA" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="DIARREIA" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="FLATULENCIA" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="NAUSEAS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="PROB_RESP" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="GRIPES" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="HEPS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="AFTA" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="FADIGA" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="VISAO_BORRADA" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="DORES_ARTICULACAO" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="MUDANCA_HUMOR" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="PACIENTE" Relationship="Self.FK_ANM_CLINICA_0" FromRole="ANM_CLINICA" ToRole="PACIENTE" />
+          <NavigationProperty Name="PACIENTE_CONSULTA" Relationship="Self.FK_PACIENTE_CONSULTA_4" FromRole="ANM_CLINICA" ToRole="PACIENTE_CONSULTA" />
+        </EntityType>
+        <EntityType Name="ANM_DADOSGERAIS">
+          <Key>
+            <PropertyRef Name="ID_DADOSGERAIS" />
+            <PropertyRef Name="ID_PACIENTE" />
+          </Key>
+          <Property Name="ID_DADOSGERAIS" Type="Int32" Nullable="false" />
+          <Property Name="ID_PACIENTE" Type="Int32" Nullable="false" />
+          <Property Name="MASTIGACAO" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="DENTICAO" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="ALERGIA" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="AVERSOES" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ALM_PREFERIDOS" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="TP_ACUCAR" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="OUTROS_ACUCAR" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="HR_MAIS_FOME" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="TABAGISMO" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="ETILISMO" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="FARMACOS" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="ATVD_FISICA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="FREQ_ATVD_FISICA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="ING_HIDRICA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="HAB_INTESTINAL" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="ESCALA_BRISTOL" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="TRATAMENTOS" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="PROB_TRATAMENTO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="TEMPERAMENTO" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="HR_SONO" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="CON_TRABALHO" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="PACIENTE" Relationship="Self.FK_ANM_DADOSGERAIS_0" FromRole="ANM_DADOSGERAIS" ToRole="PACIENTE" />
+          <NavigationProperty Name="PACIENTE_CONSULTA" Relationship="Self.FK_PACIENTE_CONSULTA_3" FromRole="ANM_DADOSGERAIS" ToRole="PACIENTE_CONSULTA" />
+        </EntityType>
+        <EntityType Name="ANTECEDENTES_FAMILIARES">
+          <Key>
+            <PropertyRef Name="ID_ANTECEDENTES" />
+            <PropertyRef Name="ID_PACIENTE" />
+          </Key>
+          <Property Name="ID_ANTECEDENTES" Type="Int32" Nullable="false" />
+          <Property Name="ID_PACIENTE" Type="Int32" Nullable="false" />
+          <Property Name="HIPERTENSAO" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="OBESIDADE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="CANCER" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="DIABETES" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="DCV" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="DISLIPIDEMIA" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="AVC" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="ANEMIA" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="OUTROS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="PACIENTE" Relationship="Self.FK_ANTECEDENTES_FAMILIARES_0" FromRole="ANTECEDENTES_FAMILIARES" ToRole="PACIENTE" />
+          <NavigationProperty Name="PACIENTE_CONSULTA" Relationship="Self.FK_PACIENTE_CONSULTA_1" FromRole="ANTECEDENTES_FAMILIARES" ToRole="PACIENTE_CONSULTA" />
+        </EntityType>
+        <EntityType Name="ANTROPOMETRIA">
+          <Key>
+            <PropertyRef Name="ID_ANTRO" />
+            <PropertyRef Name="ID_PACIENTE" />
+          </Key>
+          <Property Name="ID_ANTRO" Type="Int32" Nullable="false" />
+          <Property Name="ID_PACIENTE" Type="Int32" Nullable="false" />
+          <Property Name="PESO_ATUAL" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="PESO_HABITUAL" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="PORC_ADEQUADO" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="ALTURA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="IMC" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="CLASSIFICACAO" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="PACIENTE" Relationship="Self.FK_ANTROPOMETRIA_0" FromRole="ANTROPOMETRIA" ToRole="PACIENTE" />
+          <NavigationProperty Name="PACIENTE_CONSULTA" Relationship="Self.FK_PACIENTE_CONSULTA_2" FromRole="ANTROPOMETRIA" ToRole="PACIENTE_CONSULTA" />
+        </EntityType>
+        <EntityType Name="APARENCIA">
+          <Key>
+            <PropertyRef Name="ID_APARENCIA" />
+            <PropertyRef Name="ID_PACIENTE" />
+          </Key>
+          <Property Name="ID_APARENCIA" Type="Int32" Nullable="false" />
+          <Property Name="ID_PACIENTE" Type="Int32" Nullable="false" />
+          <Property Name="AP_FACE" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="AP_LABIOS" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="AP_LINGUA" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="AP_GENGIVA" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="AP_PELE" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="AP_CABELOS" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="AP_MUSCULOS" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="AP_TRONCO" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="AP_MEMBROS" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="AP_UNHAS" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="AP_SIST_NERVOSO" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="AP_PESCOCO" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="Attribute145" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="PACIENTE" Relationship="Self.FK_APARENCIA_0" FromRole="APARENCIA" ToRole="PACIENTE" />
+          <NavigationProperty Name="PACIENTE_CONSULTA" Relationship="Self.FK_PACIENTE_CONSULTA_5" FromRole="APARENCIA" ToRole="PACIENTE_CONSULTA" />
+        </EntityType>
+        <EntityType Name="EX_LABORA">
+          <Key>
+            <PropertyRef Name="ID_EX_LABORA" />
+            <PropertyRef Name="ID_PACIENTE" />
+          </Key>
+          <Property Name="ID_EX_LABORA" Type="Int32" Nullable="false" />
+          <Property Name="ID_PACIENTE" Type="Int32" Nullable="false" />
+          <Property Name="HERMOGRAMA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="TRIGLICERIDIOS" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="PRESSAO_ARTERIAL" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="GLICEMIA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="COLESTEROL" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="PARASITOLOGICO" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="CORTISOL" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="OUTROS" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="PACIENTE" Relationship="Self.FK_EX_LABORA_0" FromRole="EX_LABORA" ToRole="PACIENTE" />
+          <NavigationProperty Name="PACIENTE_CONSULTA" Relationship="Self.FK_PACIENTE_CONSULTA_6" FromRole="EX_LABORA" ToRole="PACIENTE_CONSULTA" />
+        </EntityType>
+        <EntityType Name="FREQ_ALIMENTAR">
+          <Key>
+            <PropertyRef Name="ID_FREQUENCIA" />
+            <PropertyRef Name="ID_PERIODO" />
+            <PropertyRef Name="ID_PACIENTE" />
+          </Key>
+          <Property Name="ID_FREQUENCIA" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="ID_PERIODO" Type="Int32" Nullable="false" />
+          <Property Name="ID_PACIENTE" Type="Int32" Nullable="false" />
+          <Property Name="DESC_ALIMENTO" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="QTD_ALIMENTO" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="PERIODICIDADE" Relationship="Self.FK_FREQ_ALIMENTAR_0" FromRole="FREQ_ALIMENTAR" ToRole="PERIODICIDADE" />
+          <NavigationProperty Name="PACIENTE" Relationship="Self.FK_FREQ_ALIMENTAR_1" FromRole="FREQ_ALIMENTAR" ToRole="PACIENTE" />
+        </EntityType>
+        <EntityType Name="NUTRICIONISTA">
+          <Key>
+            <PropertyRef Name="ID_NUTRICIONISTA" />
+          </Key>
+          <Property Name="ID_NUTRICIONISTA" Type="Int32" Nullable="false" />
+          <Property Name="NUT_NOME" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="NUT_SEXO" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="NUT_EMAIL" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="NUT_CRN" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="AREA_ATUACAO" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="PACIENTE">
+          <Key>
+            <PropertyRef Name="ID_PACIENTE" />
+          </Key>
+          <Property Name="ID_PACIENTE" Type="Int32" Nullable="false" />
+          <Property Name="NOME" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="SEXO" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="DT_NASC" Type="DateTime" Precision="0" />
+          <Property Name="EST_CIVIL" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="PROFISSAO" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="ENDERECO" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="EMAIL" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="TELEFONE" Type="String" MaxLength="14" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="ANM_CLINICA" Relationship="Self.FK_ANM_CLINICA_0" FromRole="PACIENTE" ToRole="ANM_CLINICA" />
+          <NavigationProperty Name="ANM_DADOSGERAIS" Relationship="Self.FK_ANM_DADOSGERAIS_0" FromRole="PACIENTE" ToRole="ANM_DADOSGERAIS" />
+          <NavigationProperty Name="ANTECEDENTES_FAMILIARES" Relationship="Self.FK_ANTECEDENTES_FAMILIARES_0" FromRole="PACIENTE" ToRole="ANTECEDENTES_FAMILIARES" />
+          <NavigationProperty Name="ANTROPOMETRIA" Relationship="Self.FK_ANTROPOMETRIA_0" FromRole="PACIENTE" ToRole="ANTROPOMETRIA" />
+          <NavigationProperty Name="APARENCIA" Relationship="Self.FK_APARENCIA_0" FromRole="PACIENTE" ToRole="APARENCIA" />
+          <NavigationProperty Name="EX_LABORA" Relationship="Self.FK_EX_LABORA_0" FromRole="PACIENTE" ToRole="EX_LABORA" />
+          <NavigationProperty Name="FREQ_ALIMENTAR" Relationship="Self.FK_FREQ_ALIMENTAR_1" FromRole="PACIENTE" ToRole="FREQ_ALIMENTAR" />
+          <NavigationProperty Name="PACIENTE_CONSULTA" Relationship="Self.FK_PACIENTE_CONSULTA_0" FromRole="PACIENTE" ToRole="PACIENTE_CONSULTA" />
+          <NavigationProperty Name="RECEITAS" Relationship="NutriPocketModel.FK_RECEITAS_PACIENTE" FromRole="PACIENTE" ToRole="RECEITAS" />
+        </EntityType>
+        <EntityType Name="PACIENTE_CONSULTA">
+          <Key>
+            <PropertyRef Name="ID_CONSULTA" />
+            <PropertyRef Name="ID_PACIENTE" />
+            <PropertyRef Name="ID_ANTRO" />
+            <PropertyRef Name="ID_ANTECEDENTES" />
+            <PropertyRef Name="ID_DADOSGERAIS" />
+            <PropertyRef Name="ID_CLINICA" />
+            <PropertyRef Name="ID_APARENCIA" />
+            <PropertyRef Name="ID_EX_LABORA" />
+          </Key>
+          <Property Name="ID_CONSULTA" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="ID_PACIENTE" Type="Int32" Nullable="false" />
+          <Property Name="ID_ANTRO" Type="Int32" Nullable="false" />
+          <Property Name="ID_ANTECEDENTES" Type="Int32" Nullable="false" />
+          <Property Name="ID_DADOSGERAIS" Type="Int32" Nullable="false" />
+          <Property Name="ID_CLINICA" Type="Int32" Nullable="false" />
+          <Property Name="ID_APARENCIA" Type="Int32" Nullable="false" />
+          <Property Name="ID_EX_LABORA" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="ANM_CLINICA" Relationship="Self.FK_PACIENTE_CONSULTA_4" FromRole="PACIENTE_CONSULTA" ToRole="ANM_CLINICA" />
+          <NavigationProperty Name="ANM_DADOSGERAIS" Relationship="Self.FK_PACIENTE_CONSULTA_3" FromRole="PACIENTE_CONSULTA" ToRole="ANM_DADOSGERAIS" />
+          <NavigationProperty Name="ANTECEDENTES_FAMILIARES" Relationship="Self.FK_PACIENTE_CONSULTA_1" FromRole="PACIENTE_CONSULTA" ToRole="ANTECEDENTES_FAMILIARES" />
+          <NavigationProperty Name="ANTROPOMETRIA" Relationship="Self.FK_PACIENTE_CONSULTA_2" FromRole="PACIENTE_CONSULTA" ToRole="ANTROPOMETRIA" />
+          <NavigationProperty Name="APARENCIA" Relationship="Self.FK_PACIENTE_CONSULTA_5" FromRole="PACIENTE_CONSULTA" ToRole="APARENCIA" />
+          <NavigationProperty Name="EX_LABORA" Relationship="Self.FK_PACIENTE_CONSULTA_6" FromRole="PACIENTE_CONSULTA" ToRole="EX_LABORA" />
+          <NavigationProperty Name="PACIENTE" Relationship="Self.FK_PACIENTE_CONSULTA_0" FromRole="PACIENTE_CONSULTA" ToRole="PACIENTE" />
+        </EntityType>
+        <EntityType Name="PERIODICIDADE">
+          <Key>
+            <PropertyRef Name="ID_PERIODO" />
+          </Key>
+          <Property Name="ID_PERIODO" Type="Int32" Nullable="false" />
+          <Property Name="DESC_PERIODO" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="FREQ_ALIMENTAR" Relationship="Self.FK_FREQ_ALIMENTAR_0" FromRole="PERIODICIDADE" ToRole="FREQ_ALIMENTAR" />
+          <NavigationProperty Name="RECOR_ALIMENTACAO" Relationship="Self.FK_RECOR_ALIMENTACAO_0" FromRole="PERIODICIDADE" ToRole="RECOR_ALIMENTACAO" />
+        </EntityType>
+        <EntityType Name="RECEITAS">
+          <Key>
+            <PropertyRef Name="ID_RECEITA" />
+          </Key>
+          <Property Name="ID_RECEITA" Type="Int32" Nullable="false" />
+          <Property Name="TITULO" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="CATEGORIA" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="MODO_PREPARO" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="INGREDIENTES" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="FOTO_RECEITA" Type="Boolean" />
+          <Property Name="ID_PACIENTE" Type="Int32" />
+          <NavigationProperty Name="PACIENTE" Relationship="NutriPocketModel.FK_RECEITAS_PACIENTE" FromRole="RECEITAS" ToRole="PACIENTE" />
+        </EntityType>
+        <EntityType Name="RECOR_ALIMENTACAO">
+          <Key>
+            <PropertyRef Name="ID_PERIODO" />
+          </Key>
+          <Property Name="ID_PERIODO" Type="Int32" Nullable="false" />
+          <Property Name="DESC_ALIMENTO" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="QTD_ALIMENTO" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="HORARIO" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="PERIODICIDADE" Relationship="Self.FK_RECOR_ALIMENTACAO_0" FromRole="RECOR_ALIMENTACAO" ToRole="PERIODICIDADE" />
+        </EntityType>
+        <Association Name="FK_ANM_CLINICA_0">
+          <End Role="PACIENTE" Type="Self.PACIENTE" Multiplicity="1" />
+          <End Role="ANM_CLINICA" Type="Self.ANM_CLINICA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PACIENTE">
+              <PropertyRef Name="ID_PACIENTE" />
+            </Principal>
+            <Dependent Role="ANM_CLINICA">
+              <PropertyRef Name="ID_PACIENTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PACIENTE_CONSULTA_4">
+          <End Role="ANM_CLINICA" Type="Self.ANM_CLINICA" Multiplicity="1" />
+          <End Role="PACIENTE_CONSULTA" Type="Self.PACIENTE_CONSULTA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ANM_CLINICA">
+              <PropertyRef Name="ID_CLINICA" />
+              <PropertyRef Name="ID_PACIENTE" />
+            </Principal>
+            <Dependent Role="PACIENTE_CONSULTA">
+              <PropertyRef Name="ID_CLINICA" />
+              <PropertyRef Name="ID_PACIENTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ANM_DADOSGERAIS_0">
+          <End Role="PACIENTE" Type="Self.PACIENTE" Multiplicity="1" />
+          <End Role="ANM_DADOSGERAIS" Type="Self.ANM_DADOSGERAIS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PACIENTE">
+              <PropertyRef Name="ID_PACIENTE" />
+            </Principal>
+            <Dependent Role="ANM_DADOSGERAIS">
+              <PropertyRef Name="ID_PACIENTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PACIENTE_CONSULTA_3">
+          <End Role="ANM_DADOSGERAIS" Type="Self.ANM_DADOSGERAIS" Multiplicity="1" />
+          <End Role="PACIENTE_CONSULTA" Type="Self.PACIENTE_CONSULTA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ANM_DADOSGERAIS">
+              <PropertyRef Name="ID_DADOSGERAIS" />
+              <PropertyRef Name="ID_PACIENTE" />
+            </Principal>
+            <Dependent Role="PACIENTE_CONSULTA">
+              <PropertyRef Name="ID_DADOSGERAIS" />
+              <PropertyRef Name="ID_PACIENTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ANTECEDENTES_FAMILIARES_0">
+          <End Role="PACIENTE" Type="Self.PACIENTE" Multiplicity="1" />
+          <End Role="ANTECEDENTES_FAMILIARES" Type="Self.ANTECEDENTES_FAMILIARES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PACIENTE">
+              <PropertyRef Name="ID_PACIENTE" />
+            </Principal>
+            <Dependent Role="ANTECEDENTES_FAMILIARES">
+              <PropertyRef Name="ID_PACIENTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PACIENTE_CONSULTA_1">
+          <End Role="ANTECEDENTES_FAMILIARES" Type="Self.ANTECEDENTES_FAMILIARES" Multiplicity="1" />
+          <End Role="PACIENTE_CONSULTA" Type="Self.PACIENTE_CONSULTA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ANTECEDENTES_FAMILIARES">
+              <PropertyRef Name="ID_ANTECEDENTES" />
+              <PropertyRef Name="ID_PACIENTE" />
+            </Principal>
+            <Dependent Role="PACIENTE_CONSULTA">
+              <PropertyRef Name="ID_ANTECEDENTES" />
+              <PropertyRef Name="ID_PACIENTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ANTROPOMETRIA_0">
+          <End Role="PACIENTE" Type="Self.PACIENTE" Multiplicity="1" />
+          <End Role="ANTROPOMETRIA" Type="Self.ANTROPOMETRIA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PACIENTE">
+              <PropertyRef Name="ID_PACIENTE" />
+            </Principal>
+            <Dependent Role="ANTROPOMETRIA">
+              <PropertyRef Name="ID_PACIENTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PACIENTE_CONSULTA_2">
+          <End Role="ANTROPOMETRIA" Type="Self.ANTROPOMETRIA" Multiplicity="1" />
+          <End Role="PACIENTE_CONSULTA" Type="Self.PACIENTE_CONSULTA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ANTROPOMETRIA">
+              <PropertyRef Name="ID_ANTRO" />
+              <PropertyRef Name="ID_PACIENTE" />
+            </Principal>
+            <Dependent Role="PACIENTE_CONSULTA">
+              <PropertyRef Name="ID_ANTRO" />
+              <PropertyRef Name="ID_PACIENTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_APARENCIA_0">
+          <End Role="PACIENTE" Type="Self.PACIENTE" Multiplicity="1" />
+          <End Role="APARENCIA" Type="Self.APARENCIA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PACIENTE">
+              <PropertyRef Name="ID_PACIENTE" />
+            </Principal>
+            <Dependent Role="APARENCIA">
+              <PropertyRef Name="ID_PACIENTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PACIENTE_CONSULTA_5">
+          <End Role="APARENCIA" Type="Self.APARENCIA" Multiplicity="1" />
+          <End Role="PACIENTE_CONSULTA" Type="Self.PACIENTE_CONSULTA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="APARENCIA">
+              <PropertyRef Name="ID_APARENCIA" />
+              <PropertyRef Name="ID_PACIENTE" />
+            </Principal>
+            <Dependent Role="PACIENTE_CONSULTA">
+              <PropertyRef Name="ID_APARENCIA" />
+              <PropertyRef Name="ID_PACIENTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EX_LABORA_0">
+          <End Role="PACIENTE" Type="Self.PACIENTE" Multiplicity="1" />
+          <End Role="EX_LABORA" Type="Self.EX_LABORA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PACIENTE">
+              <PropertyRef Name="ID_PACIENTE" />
+            </Principal>
+            <Dependent Role="EX_LABORA">
+              <PropertyRef Name="ID_PACIENTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PACIENTE_CONSULTA_6">
+          <End Role="EX_LABORA" Type="Self.EX_LABORA" Multiplicity="1" />
+          <End Role="PACIENTE_CONSULTA" Type="Self.PACIENTE_CONSULTA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EX_LABORA">
+              <PropertyRef Name="ID_EX_LABORA" />
+              <PropertyRef Name="ID_PACIENTE" />
+            </Principal>
+            <Dependent Role="PACIENTE_CONSULTA">
+              <PropertyRef Name="ID_EX_LABORA" />
+              <PropertyRef Name="ID_PACIENTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FREQ_ALIMENTAR_0">
+          <End Role="PERIODICIDADE" Type="Self.PERIODICIDADE" Multiplicity="1" />
+          <End Role="FREQ_ALIMENTAR" Type="Self.FREQ_ALIMENTAR" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PERIODICIDADE">
+              <PropertyRef Name="ID_PERIODO" />
+            </Principal>
+            <Dependent Role="FREQ_ALIMENTAR">
+              <PropertyRef Name="ID_PERIODO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FREQ_ALIMENTAR_1">
+          <End Role="PACIENTE" Type="Self.PACIENTE" Multiplicity="1" />
+          <End Role="FREQ_ALIMENTAR" Type="Self.FREQ_ALIMENTAR" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PACIENTE">
+              <PropertyRef Name="ID_PACIENTE" />
+            </Principal>
+            <Dependent Role="FREQ_ALIMENTAR">
+              <PropertyRef Name="ID_PACIENTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PACIENTE_CONSULTA_0">
+          <End Role="PACIENTE" Type="Self.PACIENTE" Multiplicity="1" />
+          <End Role="PACIENTE_CONSULTA" Type="Self.PACIENTE_CONSULTA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PACIENTE">
+              <PropertyRef Name="ID_PACIENTE" />
+            </Principal>
+            <Dependent Role="PACIENTE_CONSULTA">
+              <PropertyRef Name="ID_PACIENTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RECOR_ALIMENTACAO_0">
+          <End Role="PERIODICIDADE" Type="Self.PERIODICIDADE" Multiplicity="1" />
+          <End Role="RECOR_ALIMENTACAO" Type="Self.RECOR_ALIMENTACAO" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="PERIODICIDADE">
+              <PropertyRef Name="ID_PERIODO" />
+            </Principal>
+            <Dependent Role="RECOR_ALIMENTACAO">
+              <PropertyRef Name="ID_PERIODO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="NutriPocketEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ANM_CLINICA" EntityType="Self.ANM_CLINICA" />
+          <EntitySet Name="ANM_DADOSGERAIS" EntityType="Self.ANM_DADOSGERAIS" />
+          <EntitySet Name="ANTECEDENTES_FAMILIARES" EntityType="Self.ANTECEDENTES_FAMILIARES" />
+          <EntitySet Name="ANTROPOMETRIA" EntityType="Self.ANTROPOMETRIA" />
+          <EntitySet Name="APARENCIA" EntityType="Self.APARENCIA" />
+          <EntitySet Name="EX_LABORA" EntityType="Self.EX_LABORA" />
+          <EntitySet Name="FREQ_ALIMENTAR" EntityType="Self.FREQ_ALIMENTAR" />
+          <EntitySet Name="NUTRICIONISTA" EntityType="Self.NUTRICIONISTA" />
+          <EntitySet Name="PACIENTE" EntityType="Self.PACIENTE" />
+          <EntitySet Name="PACIENTE_CONSULTA" EntityType="Self.PACIENTE_CONSULTA" />
+          <EntitySet Name="PERIODICIDADE" EntityType="Self.PERIODICIDADE" />
+          <EntitySet Name="RECEITAS" EntityType="Self.RECEITAS" />
+          <EntitySet Name="RECOR_ALIMENTACAO" EntityType="Self.RECOR_ALIMENTACAO" />
+          <AssociationSet Name="FK_ANM_CLINICA_0" Association="Self.FK_ANM_CLINICA_0">
+            <End Role="PACIENTE" EntitySet="PACIENTE" />
+            <End Role="ANM_CLINICA" EntitySet="ANM_CLINICA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PACIENTE_CONSULTA_4" Association="Self.FK_PACIENTE_CONSULTA_4">
+            <End Role="ANM_CLINICA" EntitySet="ANM_CLINICA" />
+            <End Role="PACIENTE_CONSULTA" EntitySet="PACIENTE_CONSULTA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ANM_DADOSGERAIS_0" Association="Self.FK_ANM_DADOSGERAIS_0">
+            <End Role="PACIENTE" EntitySet="PACIENTE" />
+            <End Role="ANM_DADOSGERAIS" EntitySet="ANM_DADOSGERAIS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PACIENTE_CONSULTA_3" Association="Self.FK_PACIENTE_CONSULTA_3">
+            <End Role="ANM_DADOSGERAIS" EntitySet="ANM_DADOSGERAIS" />
+            <End Role="PACIENTE_CONSULTA" EntitySet="PACIENTE_CONSULTA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ANTECEDENTES_FAMILIARES_0" Association="Self.FK_ANTECEDENTES_FAMILIARES_0">
+            <End Role="PACIENTE" EntitySet="PACIENTE" />
+            <End Role="ANTECEDENTES_FAMILIARES" EntitySet="ANTECEDENTES_FAMILIARES" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PACIENTE_CONSULTA_1" Association="Self.FK_PACIENTE_CONSULTA_1">
+            <End Role="ANTECEDENTES_FAMILIARES" EntitySet="ANTECEDENTES_FAMILIARES" />
+            <End Role="PACIENTE_CONSULTA" EntitySet="PACIENTE_CONSULTA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ANTROPOMETRIA_0" Association="Self.FK_ANTROPOMETRIA_0">
+            <End Role="PACIENTE" EntitySet="PACIENTE" />
+            <End Role="ANTROPOMETRIA" EntitySet="ANTROPOMETRIA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PACIENTE_CONSULTA_2" Association="Self.FK_PACIENTE_CONSULTA_2">
+            <End Role="ANTROPOMETRIA" EntitySet="ANTROPOMETRIA" />
+            <End Role="PACIENTE_CONSULTA" EntitySet="PACIENTE_CONSULTA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_APARENCIA_0" Association="Self.FK_APARENCIA_0">
+            <End Role="PACIENTE" EntitySet="PACIENTE" />
+            <End Role="APARENCIA" EntitySet="APARENCIA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PACIENTE_CONSULTA_5" Association="Self.FK_PACIENTE_CONSULTA_5">
+            <End Role="APARENCIA" EntitySet="APARENCIA" />
+            <End Role="PACIENTE_CONSULTA" EntitySet="PACIENTE_CONSULTA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EX_LABORA_0" Association="Self.FK_EX_LABORA_0">
+            <End Role="PACIENTE" EntitySet="PACIENTE" />
+            <End Role="EX_LABORA" EntitySet="EX_LABORA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PACIENTE_CONSULTA_6" Association="Self.FK_PACIENTE_CONSULTA_6">
+            <End Role="EX_LABORA" EntitySet="EX_LABORA" />
+            <End Role="PACIENTE_CONSULTA" EntitySet="PACIENTE_CONSULTA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FREQ_ALIMENTAR_0" Association="Self.FK_FREQ_ALIMENTAR_0">
+            <End Role="PERIODICIDADE" EntitySet="PERIODICIDADE" />
+            <End Role="FREQ_ALIMENTAR" EntitySet="FREQ_ALIMENTAR" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FREQ_ALIMENTAR_1" Association="Self.FK_FREQ_ALIMENTAR_1">
+            <End Role="PACIENTE" EntitySet="PACIENTE" />
+            <End Role="FREQ_ALIMENTAR" EntitySet="FREQ_ALIMENTAR" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PACIENTE_CONSULTA_0" Association="Self.FK_PACIENTE_CONSULTA_0">
+            <End Role="PACIENTE" EntitySet="PACIENTE" />
+            <End Role="PACIENTE_CONSULTA" EntitySet="PACIENTE_CONSULTA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RECOR_ALIMENTACAO_0" Association="Self.FK_RECOR_ALIMENTACAO_0">
+            <End Role="PERIODICIDADE" EntitySet="PERIODICIDADE" />
+            <End Role="RECOR_ALIMENTACAO" EntitySet="RECOR_ALIMENTACAO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RECEITAS_PACIENTE" Association="NutriPocketModel.FK_RECEITAS_PACIENTE">
+            <End Role="PACIENTE" EntitySet="PACIENTE" />
+            <End Role="RECEITAS" EntitySet="RECEITAS" />
+          </AssociationSet>
+        </EntityContainer>
+        <Association Name="FK_RECEITAS_PACIENTE">
+          <End Type="NutriPocketModel.PACIENTE" Role="PACIENTE" Multiplicity="0..1" />
+          <End Type="NutriPocketModel.RECEITAS" Role="RECEITAS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PACIENTE">
+              <PropertyRef Name="ID_PACIENTE" />
+            </Principal>
+            <Dependent Role="RECEITAS">
+              <PropertyRef Name="ID_PACIENTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="NutriPocketModelStoreContainer" CdmEntityContainer="NutriPocketEntities">
+          <EntitySetMapping Name="ANM_CLINICA">
+            <EntityTypeMapping TypeName="NutriPocketModel.ANM_CLINICA">
+              <MappingFragment StoreEntitySet="ANM_CLINICA">
+                <ScalarProperty Name="ID_CLINICA" ColumnName="ID_CLINICA" />
+                <ScalarProperty Name="ID_PACIENTE" ColumnName="ID_PACIENTE" />
+                <ScalarProperty Name="DISFAGIA" ColumnName="DISFAGIA" />
+                <ScalarProperty Name="CONSTIPACAO" ColumnName="CONSTIPACAO" />
+                <ScalarProperty Name="VOMITOS" ColumnName="VOMITOS" />
+                <ScalarProperty Name="ANOREXIA" ColumnName="ANOREXIA" />
+                <ScalarProperty Name="H_PILORI" ColumnName="H_PILORI" />
+                <ScalarProperty Name="PIROSE" ColumnName="PIROSE" />
+                <ScalarProperty Name="ODINOFAGIA" ColumnName="ODINOFAGIA" />
+                <ScalarProperty Name="DIARREIA" ColumnName="DIARREIA" />
+                <ScalarProperty Name="FLATULENCIA" ColumnName="FLATULENCIA" />
+                <ScalarProperty Name="NAUSEAS" ColumnName="NAUSEAS" />
+                <ScalarProperty Name="PROB_RESP" ColumnName="PROB_RESP" />
+                <ScalarProperty Name="GRIPES" ColumnName="GRIPES" />
+                <ScalarProperty Name="HEPS" ColumnName="HEPS" />
+                <ScalarProperty Name="AFTA" ColumnName="AFTA" />
+                <ScalarProperty Name="FADIGA" ColumnName="FADIGA" />
+                <ScalarProperty Name="VISAO_BORRADA" ColumnName="VISAO_BORRADA" />
+                <ScalarProperty Name="DORES_ARTICULACAO" ColumnName="DORES_ARTICULACAO" />
+                <ScalarProperty Name="MUDANCA_HUMOR" ColumnName="MUDANCA_HUMOR" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ANM_DADOSGERAIS">
+            <EntityTypeMapping TypeName="NutriPocketModel.ANM_DADOSGERAIS">
+              <MappingFragment StoreEntitySet="ANM_DADOSGERAIS">
+                <ScalarProperty Name="ID_DADOSGERAIS" ColumnName="ID_DADOSGERAIS" />
+                <ScalarProperty Name="ID_PACIENTE" ColumnName="ID_PACIENTE" />
+                <ScalarProperty Name="MASTIGACAO" ColumnName="MASTIGACAO" />
+                <ScalarProperty Name="DENTICAO" ColumnName="DENTICAO" />
+                <ScalarProperty Name="ALERGIA" ColumnName="ALERGIA" />
+                <ScalarProperty Name="AVERSOES" ColumnName="AVERSOES" />
+                <ScalarProperty Name="ALM_PREFERIDOS" ColumnName="ALM_PREFERIDOS" />
+                <ScalarProperty Name="TP_ACUCAR" ColumnName="TP_ACUCAR" />
+                <ScalarProperty Name="OUTROS_ACUCAR" ColumnName="OUTROS_ACUCAR" />
+                <ScalarProperty Name="HR_MAIS_FOME" ColumnName="HR_MAIS_FOME" />
+                <ScalarProperty Name="TABAGISMO" ColumnName="TABAGISMO" />
+                <ScalarProperty Name="ETILISMO" ColumnName="ETILISMO" />
+                <ScalarProperty Name="FARMACOS" ColumnName="FARMACOS" />
+                <ScalarProperty Name="ATVD_FISICA" ColumnName="ATVD_FISICA" />
+                <ScalarProperty Name="FREQ_ATVD_FISICA" ColumnName="FREQ_ATVD_FISICA" />
+                <ScalarProperty Name="ING_HIDRICA" ColumnName="ING_HIDRICA" />
+                <ScalarProperty Name="HAB_INTESTINAL" ColumnName="HAB_INTESTINAL" />
+                <ScalarProperty Name="ESCALA_BRISTOL" ColumnName="ESCALA_BRISTOL" />
+                <ScalarProperty Name="TRATAMENTOS" ColumnName="TRATAMENTOS" />
+                <ScalarProperty Name="PROB_TRATAMENTO" ColumnName="PROB_TRATAMENTO" />
+                <ScalarProperty Name="TEMPERAMENTO" ColumnName="TEMPERAMENTO" />
+                <ScalarProperty Name="HR_SONO" ColumnName="HR_SONO" />
+                <ScalarProperty Name="CON_TRABALHO" ColumnName="CON_TRABALHO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ANTECEDENTES_FAMILIARES">
+            <EntityTypeMapping TypeName="NutriPocketModel.ANTECEDENTES_FAMILIARES">
+              <MappingFragment StoreEntitySet="ANTECEDENTES_FAMILIARES">
+                <ScalarProperty Name="ID_ANTECEDENTES" ColumnName="ID_ANTECEDENTES" />
+                <ScalarProperty Name="ID_PACIENTE" ColumnName="ID_PACIENTE" />
+                <ScalarProperty Name="HIPERTENSAO" ColumnName="HIPERTENSAO" />
+                <ScalarProperty Name="OBESIDADE" ColumnName="OBESIDADE" />
+                <ScalarProperty Name="CANCER" ColumnName="CANCER" />
+                <ScalarProperty Name="DIABETES" ColumnName="DIABETES" />
+                <ScalarProperty Name="DCV" ColumnName="DCV" />
+                <ScalarProperty Name="DISLIPIDEMIA" ColumnName="DISLIPIDEMIA" />
+                <ScalarProperty Name="AVC" ColumnName="AVC" />
+                <ScalarProperty Name="ANEMIA" ColumnName="ANEMIA" />
+                <ScalarProperty Name="OUTROS" ColumnName="OUTROS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ANTROPOMETRIA">
+            <EntityTypeMapping TypeName="NutriPocketModel.ANTROPOMETRIA">
+              <MappingFragment StoreEntitySet="ANTROPOMETRIA">
+                <ScalarProperty Name="ID_ANTRO" ColumnName="ID_ANTRO" />
+                <ScalarProperty Name="ID_PACIENTE" ColumnName="ID_PACIENTE" />
+                <ScalarProperty Name="PESO_ATUAL" ColumnName="PESO_ATUAL" />
+                <ScalarProperty Name="PESO_HABITUAL" ColumnName="PESO_HABITUAL" />
+                <ScalarProperty Name="PORC_ADEQUADO" ColumnName="PORC_ADEQUADO" />
+                <ScalarProperty Name="ALTURA" ColumnName="ALTURA" />
+                <ScalarProperty Name="IMC" ColumnName="IMC" />
+                <ScalarProperty Name="CLASSIFICACAO" ColumnName="CLASSIFICACAO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="APARENCIA">
+            <EntityTypeMapping TypeName="NutriPocketModel.APARENCIA">
+              <MappingFragment StoreEntitySet="APARENCIA">
+                <ScalarProperty Name="ID_APARENCIA" ColumnName="ID_APARENCIA" />
+                <ScalarProperty Name="ID_PACIENTE" ColumnName="ID_PACIENTE" />
+                <ScalarProperty Name="AP_FACE" ColumnName="AP_FACE" />
+                <ScalarProperty Name="AP_LABIOS" ColumnName="AP_LABIOS" />
+                <ScalarProperty Name="AP_LINGUA" ColumnName="AP_LINGUA" />
+                <ScalarProperty Name="AP_GENGIVA" ColumnName="AP_GENGIVA" />
+                <ScalarProperty Name="AP_PELE" ColumnName="AP_PELE" />
+                <ScalarProperty Name="AP_CABELOS" ColumnName="AP_CABELOS" />
+                <ScalarProperty Name="AP_MUSCULOS" ColumnName="AP_MUSCULOS" />
+                <ScalarProperty Name="AP_TRONCO" ColumnName="AP_TRONCO" />
+                <ScalarProperty Name="AP_MEMBROS" ColumnName="AP_MEMBROS" />
+                <ScalarProperty Name="AP_UNHAS" ColumnName="AP_UNHAS" />
+                <ScalarProperty Name="AP_SIST_NERVOSO" ColumnName="AP_SIST_NERVOSO" />
+                <ScalarProperty Name="AP_PESCOCO" ColumnName="AP_PESCOCO" />
+                <ScalarProperty Name="Attribute145" ColumnName="Attribute145" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EX_LABORA">
+            <EntityTypeMapping TypeName="NutriPocketModel.EX_LABORA">
+              <MappingFragment StoreEntitySet="EX_LABORA">
+                <ScalarProperty Name="ID_EX_LABORA" ColumnName="ID_EX_LABORA" />
+                <ScalarProperty Name="ID_PACIENTE" ColumnName="ID_PACIENTE" />
+                <ScalarProperty Name="HERMOGRAMA" ColumnName="HERMOGRAMA" />
+                <ScalarProperty Name="TRIGLICERIDIOS" ColumnName="TRIGLICERIDIOS" />
+                <ScalarProperty Name="PRESSAO_ARTERIAL" ColumnName="PRESSAO_ARTERIAL" />
+                <ScalarProperty Name="GLICEMIA" ColumnName="GLICEMIA" />
+                <ScalarProperty Name="COLESTEROL" ColumnName="COLESTEROL" />
+                <ScalarProperty Name="PARASITOLOGICO" ColumnName="PARASITOLOGICO" />
+                <ScalarProperty Name="CORTISOL" ColumnName="CORTISOL" />
+                <ScalarProperty Name="OUTROS" ColumnName="OUTROS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FREQ_ALIMENTAR">
+            <EntityTypeMapping TypeName="NutriPocketModel.FREQ_ALIMENTAR">
+              <MappingFragment StoreEntitySet="FREQ_ALIMENTAR">
+                <ScalarProperty Name="ID_FREQUENCIA" ColumnName="ID_FREQUENCIA" />
+                <ScalarProperty Name="ID_PERIODO" ColumnName="ID_PERIODO" />
+                <ScalarProperty Name="ID_PACIENTE" ColumnName="ID_PACIENTE" />
+                <ScalarProperty Name="DESC_ALIMENTO" ColumnName="DESC_ALIMENTO" />
+                <ScalarProperty Name="QTD_ALIMENTO" ColumnName="QTD_ALIMENTO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NUTRICIONISTA">
+            <EntityTypeMapping TypeName="NutriPocketModel.NUTRICIONISTA">
+              <MappingFragment StoreEntitySet="NUTRICIONISTA">
+                <ScalarProperty Name="ID_NUTRICIONISTA" ColumnName="ID_NUTRICIONISTA" />
+                <ScalarProperty Name="NUT_NOME" ColumnName="NUT_NOME" />
+                <ScalarProperty Name="NUT_SEXO" ColumnName="NUT_SEXO" />
+                <ScalarProperty Name="NUT_EMAIL" ColumnName="NUT_EMAIL" />
+                <ScalarProperty Name="NUT_CRN" ColumnName="NUT_CRN" />
+                <ScalarProperty Name="AREA_ATUACAO" ColumnName="AREA_ATUACAO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PACIENTE">
+            <EntityTypeMapping TypeName="NutriPocketModel.PACIENTE">
+              <MappingFragment StoreEntitySet="PACIENTE">
+                <ScalarProperty Name="ID_PACIENTE" ColumnName="ID_PACIENTE" />
+                <ScalarProperty Name="NOME" ColumnName="NOME" />
+                <ScalarProperty Name="SEXO" ColumnName="SEXO" />
+                <ScalarProperty Name="DT_NASC" ColumnName="DT_NASC" />
+                <ScalarProperty Name="EST_CIVIL" ColumnName="EST_CIVIL" />
+                <ScalarProperty Name="PROFISSAO" ColumnName="PROFISSAO" />
+                <ScalarProperty Name="ENDERECO" ColumnName="ENDERECO" />
+                <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+                <ScalarProperty Name="TELEFONE" ColumnName="TELEFONE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PACIENTE_CONSULTA">
+            <EntityTypeMapping TypeName="NutriPocketModel.PACIENTE_CONSULTA">
+              <MappingFragment StoreEntitySet="PACIENTE_CONSULTA">
+                <ScalarProperty Name="ID_CONSULTA" ColumnName="ID_CONSULTA" />
+                <ScalarProperty Name="ID_PACIENTE" ColumnName="ID_PACIENTE" />
+                <ScalarProperty Name="ID_ANTRO" ColumnName="ID_ANTRO" />
+                <ScalarProperty Name="ID_ANTECEDENTES" ColumnName="ID_ANTECEDENTES" />
+                <ScalarProperty Name="ID_DADOSGERAIS" ColumnName="ID_DADOSGERAIS" />
+                <ScalarProperty Name="ID_CLINICA" ColumnName="ID_CLINICA" />
+                <ScalarProperty Name="ID_APARENCIA" ColumnName="ID_APARENCIA" />
+                <ScalarProperty Name="ID_EX_LABORA" ColumnName="ID_EX_LABORA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PERIODICIDADE">
+            <EntityTypeMapping TypeName="NutriPocketModel.PERIODICIDADE">
+              <MappingFragment StoreEntitySet="PERIODICIDADE">
+                <ScalarProperty Name="ID_PERIODO" ColumnName="ID_PERIODO" />
+                <ScalarProperty Name="DESC_PERIODO" ColumnName="DESC_PERIODO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RECEITAS">
+            <EntityTypeMapping TypeName="NutriPocketModel.RECEITAS">
+              <MappingFragment StoreEntitySet="RECEITAS">
+                <ScalarProperty Name="ID_PACIENTE" ColumnName="ID_PACIENTE" />
+                <ScalarProperty Name="ID_RECEITA" ColumnName="ID_RECEITA" />
+                <ScalarProperty Name="TITULO" ColumnName="TITULO" />
+                <ScalarProperty Name="CATEGORIA" ColumnName="CATEGORIA" />
+                <ScalarProperty Name="MODO_PREPARO" ColumnName="MODO_PREPARO" />
+                <ScalarProperty Name="INGREDIENTES" ColumnName="INGREDIENTES" />
+                <ScalarProperty Name="FOTO_RECEITA" ColumnName="FOTO_RECEITA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RECOR_ALIMENTACAO">
+            <EntityTypeMapping TypeName="NutriPocketModel.RECOR_ALIMENTACAO">
+              <MappingFragment StoreEntitySet="RECOR_ALIMENTACAO">
+                <ScalarProperty Name="ID_PERIODO" ColumnName="ID_PERIODO" />
+                <ScalarProperty Name="DESC_ALIMENTO" ColumnName="DESC_ALIMENTO" />
+                <ScalarProperty Name="QTD_ALIMENTO" ColumnName="QTD_ALIMENTO" />
+                <ScalarProperty Name="HORARIO" ColumnName="HORARIO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

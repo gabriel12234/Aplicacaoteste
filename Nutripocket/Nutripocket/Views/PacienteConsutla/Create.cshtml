@@ -1,0 +1,97 @@
+﻿@model Nutripocket.Models.PACIENTE_CONSULTA
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>PACIENTE_CONSULTA</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ID_CONSULTA, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ID_CONSULTA)
+                @Html.ValidationMessageFor(model => model.ID_CONSULTA)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ID_PACIENTE, "ID_PACIENTE", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("ID_PACIENTE", String.Empty)
+                @Html.ValidationMessageFor(model => model.ID_PACIENTE)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ID_ANTRO, "ID_ANTRO", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("ID_ANTRO", String.Empty)
+                @Html.ValidationMessageFor(model => model.ID_ANTRO)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ID_ANTECEDENTES, "ID_ANTECEDENTES", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("ID_ANTECEDENTES", String.Empty)
+                @Html.ValidationMessageFor(model => model.ID_ANTECEDENTES)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ID_DADOSGERAIS, "ID_DADOSGERAIS", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("ID_DADOSGERAIS", String.Empty)
+                @Html.ValidationMessageFor(model => model.ID_DADOSGERAIS)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ID_CLINICA, "ID_CLINICA", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("ID_CLINICA", String.Empty)
+                @Html.ValidationMessageFor(model => model.ID_CLINICA)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ID_APARENCIA, "ID_APARENCIA", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("ID_APARENCIA", String.Empty)
+                @Html.ValidationMessageFor(model => model.ID_APARENCIA)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ID_EX_LABORA, "ID_EX_LABORA", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("ID_EX_LABORA", String.Empty)
+                @Html.ValidationMessageFor(model => model.ID_EX_LABORA)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

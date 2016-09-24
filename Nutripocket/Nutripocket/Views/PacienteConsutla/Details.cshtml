@@ -1,0 +1,74 @@
+﻿@model Nutripocket.Models.PACIENTE_CONSULTA
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PACIENTE_CONSULTA</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ANM_CLINICA.DISFAGIA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ANM_CLINICA.DISFAGIA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ANM_DADOSGERAIS.MASTIGACAO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ANM_DADOSGERAIS.MASTIGACAO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ANTECEDENTES_FAMILIARES.HIPERTENSAO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ANTECEDENTES_FAMILIARES.HIPERTENSAO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ANTROPOMETRIA.PESO_ATUAL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ANTROPOMETRIA.PESO_ATUAL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.APARENCIA.AP_FACE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.APARENCIA.AP_FACE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EX_LABORA.HERMOGRAMA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EX_LABORA.HERMOGRAMA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PACIENTE.NOME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PACIENTE.NOME)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

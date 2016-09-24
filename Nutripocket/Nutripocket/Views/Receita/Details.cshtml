@@ -1,0 +1,66 @@
+﻿@model Nutripocket.Models.RECEITAS
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>RECEITAS</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TITULO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TITULO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CATEGORIA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CATEGORIA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MODO_PREPARO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MODO_PREPARO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.INGREDIENTES)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.INGREDIENTES)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FOTO_RECEITA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FOTO_RECEITA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PACIENTE.NOME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PACIENTE.NOME)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_RECEITA }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

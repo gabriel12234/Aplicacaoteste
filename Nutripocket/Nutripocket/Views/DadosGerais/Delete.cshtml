@@ -1,0 +1,200 @@
+﻿@model Nutripocket.Models.ANM_DADOSGERAIS
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>ANM_DADOSGERAIS</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MASTIGACAO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MASTIGACAO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DENTICAO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DENTICAO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ALERGIA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ALERGIA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AVERSOES)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AVERSOES)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ALM_PREFERIDOS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ALM_PREFERIDOS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TP_ACUCAR)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TP_ACUCAR)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OUTROS_ACUCAR)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OUTROS_ACUCAR)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HR_MAIS_FOME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HR_MAIS_FOME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TABAGISMO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TABAGISMO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ETILISMO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ETILISMO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FARMACOS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FARMACOS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ATVD_FISICA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ATVD_FISICA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FREQ_ATVD_FISICA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FREQ_ATVD_FISICA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ING_HIDRICA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ING_HIDRICA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HAB_INTESTINAL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HAB_INTESTINAL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ESCALA_BRISTOL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ESCALA_BRISTOL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TRATAMENTOS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TRATAMENTOS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PROB_TRATAMENTO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PROB_TRATAMENTO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TEMPERAMENTO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TEMPERAMENTO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HR_SONO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HR_SONO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CON_TRABALHO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CON_TRABALHO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PACIENTE.NOME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PACIENTE.NOME)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

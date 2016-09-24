@@ -1,0 +1,50 @@
+﻿@model Nutripocket.Models.FREQ_ALIMENTAR
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>FREQ_ALIMENTAR</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DESC_ALIMENTO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DESC_ALIMENTO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QTD_ALIMENTO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QTD_ALIMENTO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PERIODICIDADE.DESC_PERIODO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PERIODICIDADE.DESC_PERIODO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PACIENTE.NOME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PACIENTE.NOME)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,74 @@
+﻿@model Nutripocket.Models.NUTRICIONISTA
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>NUTRICIONISTA</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.ID_NUTRICIONISTA)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.NUT_NOME, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.NUT_NOME)
+                @Html.ValidationMessageFor(model => model.NUT_NOME)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.NUT_SEXO, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.NUT_SEXO)
+                @Html.ValidationMessageFor(model => model.NUT_SEXO)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.NUT_EMAIL, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.NUT_EMAIL)
+                @Html.ValidationMessageFor(model => model.NUT_EMAIL)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.NUT_CRN, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.NUT_CRN)
+                @Html.ValidationMessageFor(model => model.NUT_CRN)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.AREA_ATUACAO, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.AREA_ATUACAO)
+                @Html.ValidationMessageFor(model => model.AREA_ATUACAO)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

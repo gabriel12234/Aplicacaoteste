@@ -1,0 +1,98 @@
+﻿@model Nutripocket.Models.ANTECEDENTES_FAMILIARES
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ANTECEDENTES_FAMILIARES</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.HIPERTENSAO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HIPERTENSAO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OBESIDADE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OBESIDADE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CANCER)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CANCER)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DIABETES)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DIABETES)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DCV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DCV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DISLIPIDEMIA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DISLIPIDEMIA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AVC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AVC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ANEMIA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ANEMIA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OUTROS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OUTROS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PACIENTE.NOME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PACIENTE.NOME)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

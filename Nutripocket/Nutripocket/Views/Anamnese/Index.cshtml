@@ -1,0 +1,141 @@
+﻿@model IEnumerable<Nutripocket.Models.ANM_CLINICA>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DISFAGIA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CONSTIPACAO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VOMITOS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ANOREXIA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.H_PILORI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PIROSE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ODINOFAGIA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DIARREIA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FLATULENCIA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NAUSEAS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PROB_RESP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GRIPES)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HEPS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AFTA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FADIGA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VISAO_BORRADA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DORES_ARTICULACAO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MUDANCA_HUMOR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PACIENTE.NOME)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DISFAGIA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CONSTIPACAO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VOMITOS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ANOREXIA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.H_PILORI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PIROSE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ODINOFAGIA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DIARREIA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FLATULENCIA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NAUSEAS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PROB_RESP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GRIPES)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HEPS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AFTA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FADIGA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VISAO_BORRADA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DORES_ARTICULACAO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MUDANCA_HUMOR)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PACIENTE.NOME)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

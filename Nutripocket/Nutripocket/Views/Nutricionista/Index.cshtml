@@ -1,0 +1,57 @@
+﻿@model IEnumerable<Nutripocket.Models.NUTRICIONISTA>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NUT_NOME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NUT_SEXO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NUT_EMAIL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NUT_CRN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AREA_ATUACAO)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NUT_NOME)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NUT_SEXO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NUT_EMAIL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NUT_CRN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AREA_ATUACAO)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID_NUTRICIONISTA }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID_NUTRICIONISTA }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID_NUTRICIONISTA })
+        </td>
+    </tr>
+}
+
+</table>

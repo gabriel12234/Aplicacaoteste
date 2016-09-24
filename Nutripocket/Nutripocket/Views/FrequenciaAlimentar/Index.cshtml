@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Nutripocket.Models.FREQ_ALIMENTAR>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DESC_ALIMENTO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QTD_ALIMENTO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PERIODICIDADE.DESC_PERIODO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PACIENTE.NOME)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DESC_ALIMENTO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QTD_ALIMENTO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PERIODICIDADE.DESC_PERIODO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PACIENTE.NOME)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

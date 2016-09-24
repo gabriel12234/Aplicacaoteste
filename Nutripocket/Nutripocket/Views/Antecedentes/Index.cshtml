@@ -1,0 +1,87 @@
+﻿@model IEnumerable<Nutripocket.Models.ANTECEDENTES_FAMILIARES>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.HIPERTENSAO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OBESIDADE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CANCER)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DIABETES)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DCV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DISLIPIDEMIA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AVC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ANEMIA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OUTROS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PACIENTE.NOME)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.HIPERTENSAO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OBESIDADE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CANCER)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DIABETES)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DCV)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DISLIPIDEMIA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AVC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ANEMIA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OUTROS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PACIENTE.NOME)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,80 @@
+﻿@model Nutripocket.Models.PACIENTE_CONSULTA
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>PACIENTE_CONSULTA</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ANM_CLINICA.DISFAGIA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ANM_CLINICA.DISFAGIA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ANM_DADOSGERAIS.MASTIGACAO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ANM_DADOSGERAIS.MASTIGACAO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ANTECEDENTES_FAMILIARES.HIPERTENSAO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ANTECEDENTES_FAMILIARES.HIPERTENSAO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ANTROPOMETRIA.PESO_ATUAL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ANTROPOMETRIA.PESO_ATUAL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.APARENCIA.AP_FACE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.APARENCIA.AP_FACE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EX_LABORA.HERMOGRAMA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EX_LABORA.HERMOGRAMA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PACIENTE.NOME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PACIENTE.NOME)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

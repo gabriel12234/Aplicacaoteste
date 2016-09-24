@@ -1,0 +1,59 @@
+﻿@model IEnumerable<Nutripocket.Models.PACIENTE_CONSULTA>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            1.Selecione o paciente
+        </th>
+    </tr>
+    <tr>
+        <th>
+            2.Cadastre amnisesaasdaas
+
+        </th>
+    </tr>
+    <tr>
+        3.Dados
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ANM_CLINICA.DISFAGIA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ANM_DADOSGERAIS.MASTIGACAO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ANTECEDENTES_FAMILIARES.HIPERTENSAO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ANTROPOMETRIA.PESO_ATUAL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.APARENCIA.AP_FACE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EX_LABORA.HERMOGRAMA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PACIENTE.NOME)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

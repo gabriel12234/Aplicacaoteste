@@ -1,0 +1,58 @@
+﻿@model Nutripocket.Models.NUTRICIONISTA
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>NUTRICIONISTA</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NUT_NOME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NUT_NOME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NUT_SEXO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NUT_SEXO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NUT_EMAIL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NUT_EMAIL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NUT_CRN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NUT_CRN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AREA_ATUACAO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AREA_ATUACAO)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_NUTRICIONISTA }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

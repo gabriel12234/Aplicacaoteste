@@ -1,0 +1,90 @@
+﻿@model Nutripocket.Models.EX_LABORA
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>EX_LABORA</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.HERMOGRAMA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HERMOGRAMA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TRIGLICERIDIOS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TRIGLICERIDIOS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRESSAO_ARTERIAL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRESSAO_ARTERIAL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GLICEMIA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GLICEMIA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.COLESTEROL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.COLESTEROL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PARASITOLOGICO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PARASITOLOGICO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CORTISOL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CORTISOL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OUTROS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OUTROS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PACIENTE.NOME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PACIENTE.NOME)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

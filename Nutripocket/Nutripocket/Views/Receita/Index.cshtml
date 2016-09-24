@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Nutripocket.Models.RECEITAS>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TITULO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CATEGORIA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MODO_PREPARO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.INGREDIENTES)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FOTO_RECEITA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PACIENTE.NOME)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TITULO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CATEGORIA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MODO_PREPARO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.INGREDIENTES)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FOTO_RECEITA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PACIENTE.NOME)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID_RECEITA }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID_RECEITA }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID_RECEITA })
+        </td>
+    </tr>
+}
+
+</table>

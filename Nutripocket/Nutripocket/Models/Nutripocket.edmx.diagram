@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="da1f2f3e622644c5a4d3f8d79aba6c7d" Name="Diagram1">
+        <EntityTypeShape EntityType="NutriPocketModel.ANM_CLINICA" Width="1.5" PointX="0.75" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="NutriPocketModel.ANM_DADOSGERAIS" Width="1.5" PointX="8.125" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="NutriPocketModel.ANTECEDENTES_FAMILIARES" Width="1.5" PointX="3" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NutriPocketModel.ANTROPOMETRIA" Width="1.5" PointX="3" PointY="21" IsExpanded="true" />
+        <EntityTypeShape EntityType="NutriPocketModel.APARENCIA" Width="1.5" PointX="3" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NutriPocketModel.EX_LABORA" Width="1.5" PointX="3" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NutriPocketModel.FREQ_ALIMENTAR" Width="1.5" PointX="6" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="NutriPocketModel.NUTRICIONISTA" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="NutriPocketModel.PACIENTE" Width="1.5" PointX="0.75" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="NutriPocketModel.PACIENTE_CONSULTA" Width="1.5" PointX="5.25" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NutriPocketModel.PERIODICIDADE" Width="1.5" PointX="4.125" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="NutriPocketModel.RECEITAS" Width="1.5" PointX="7.375" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="NutriPocketModel.RECOR_ALIMENTACAO" Width="2.25" PointX="6" PointY="4.375" IsExpanded="true" />
+        <AssociationConnector Association="NutriPocketModel.FK_ANM_CLINICA_0" ManuallyRouted="false" />
+        <AssociationConnector Association="NutriPocketModel.FK_PACIENTE_CONSULTA_4" ManuallyRouted="false" />
+        <AssociationConnector Association="NutriPocketModel.FK_ANM_DADOSGERAIS_0" ManuallyRouted="false" />
+        <AssociationConnector Association="NutriPocketModel.FK_PACIENTE_CONSULTA_3" ManuallyRouted="false" />
+        <AssociationConnector Association="NutriPocketModel.FK_ANTECEDENTES_FAMILIARES_0" ManuallyRouted="false" />
+        <AssociationConnector Association="NutriPocketModel.FK_PACIENTE_CONSULTA_1" ManuallyRouted="false" />
+        <AssociationConnector Association="NutriPocketModel.FK_ANTROPOMETRIA_0" ManuallyRouted="false" />
+        <AssociationConnector Association="NutriPocketModel.FK_PACIENTE_CONSULTA_2" ManuallyRouted="false" />
+        <AssociationConnector Association="NutriPocketModel.FK_APARENCIA_0" ManuallyRouted="false" />
+        <AssociationConnector Association="NutriPocketModel.FK_PACIENTE_CONSULTA_5" ManuallyRouted="false" />
+        <AssociationConnector Association="NutriPocketModel.FK_EX_LABORA_0" ManuallyRouted="false" />
+        <AssociationConnector Association="NutriPocketModel.FK_PACIENTE_CONSULTA_6" ManuallyRouted="false" />
+        <AssociationConnector Association="NutriPocketModel.FK_FREQ_ALIMENTAR_0" ManuallyRouted="false" />
+        <AssociationConnector Association="NutriPocketModel.FK_FREQ_ALIMENTAR_1" ManuallyRouted="false" />
+        <AssociationConnector Association="NutriPocketModel.FK_PACIENTE_CONSULTA_0" ManuallyRouted="false" />
+        <AssociationConnector Association="NutriPocketModel.FK_RECOR_ALIMENTACAO_0" ManuallyRouted="false" />
+        <AssociationConnector Association="NutriPocketModel.FK_RECEITAS_PACIENTE" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

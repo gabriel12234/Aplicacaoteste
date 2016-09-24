@@ -1,0 +1,180 @@
+﻿@model Nutripocket.Models.ANM_CLINICA
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>ANM_CLINICA</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.ID_CLINICA)
+
+        @Html.HiddenFor(model => model.ID_PACIENTE)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DISFAGIA, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DISFAGIA)
+                @Html.ValidationMessageFor(model => model.DISFAGIA)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CONSTIPACAO, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CONSTIPACAO)
+                @Html.ValidationMessageFor(model => model.CONSTIPACAO)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.VOMITOS, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.VOMITOS)
+                @Html.ValidationMessageFor(model => model.VOMITOS)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ANOREXIA, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ANOREXIA)
+                @Html.ValidationMessageFor(model => model.ANOREXIA)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.H_PILORI, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.H_PILORI)
+                @Html.ValidationMessageFor(model => model.H_PILORI)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.PIROSE, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.PIROSE)
+                @Html.ValidationMessageFor(model => model.PIROSE)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ODINOFAGIA, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ODINOFAGIA)
+                @Html.ValidationMessageFor(model => model.ODINOFAGIA)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DIARREIA, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DIARREIA)
+                @Html.ValidationMessageFor(model => model.DIARREIA)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FLATULENCIA, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FLATULENCIA)
+                @Html.ValidationMessageFor(model => model.FLATULENCIA)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.NAUSEAS, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.NAUSEAS)
+                @Html.ValidationMessageFor(model => model.NAUSEAS)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.PROB_RESP, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.PROB_RESP)
+                @Html.ValidationMessageFor(model => model.PROB_RESP)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.GRIPES, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.GRIPES)
+                @Html.ValidationMessageFor(model => model.GRIPES)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.HEPS, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.HEPS)
+                @Html.ValidationMessageFor(model => model.HEPS)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.AFTA, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.AFTA)
+                @Html.ValidationMessageFor(model => model.AFTA)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FADIGA, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FADIGA)
+                @Html.ValidationMessageFor(model => model.FADIGA)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.VISAO_BORRADA, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.VISAO_BORRADA)
+                @Html.ValidationMessageFor(model => model.VISAO_BORRADA)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DORES_ARTICULACAO, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DORES_ARTICULACAO)
+                @Html.ValidationMessageFor(model => model.DORES_ARTICULACAO)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.MUDANCA_HUMOR, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.MUDANCA_HUMOR)
+                @Html.ValidationMessageFor(model => model.MUDANCA_HUMOR)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

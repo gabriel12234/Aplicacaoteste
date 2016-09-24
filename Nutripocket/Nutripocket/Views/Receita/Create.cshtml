@@ -1,0 +1,89 @@
+﻿@model Nutripocket.Models.RECEITAS
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>RECEITAS</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ID_RECEITA, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ID_RECEITA)
+                @Html.ValidationMessageFor(model => model.ID_RECEITA)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.TITULO, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TITULO)
+                @Html.ValidationMessageFor(model => model.TITULO)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CATEGORIA, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CATEGORIA)
+                @Html.ValidationMessageFor(model => model.CATEGORIA)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.MODO_PREPARO, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.MODO_PREPARO)
+                @Html.ValidationMessageFor(model => model.MODO_PREPARO)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.INGREDIENTES, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.INGREDIENTES)
+                @Html.ValidationMessageFor(model => model.INGREDIENTES)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FOTO_RECEITA, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FOTO_RECEITA)
+                @Html.ValidationMessageFor(model => model.FOTO_RECEITA)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ID_PACIENTE, "ID_PACIENTE", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("ID_PACIENTE", String.Empty)
+                @Html.ValidationMessageFor(model => model.ID_PACIENTE)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,74 @@
+﻿@model Nutripocket.Models.ANTROPOMETRIA
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ANTROPOMETRIA</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PESO_ATUAL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PESO_ATUAL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PESO_HABITUAL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PESO_HABITUAL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PORC_ADEQUADO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PORC_ADEQUADO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ALTURA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ALTURA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IMC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IMC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CLASSIFICACAO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CLASSIFICACAO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PACIENTE.NOME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PACIENTE.NOME)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

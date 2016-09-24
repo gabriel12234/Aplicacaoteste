@@ -1,0 +1,80 @@
+﻿@model Nutripocket.Models.ANTROPOMETRIA
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>ANTROPOMETRIA</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PESO_ATUAL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PESO_ATUAL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PESO_HABITUAL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PESO_HABITUAL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PORC_ADEQUADO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PORC_ADEQUADO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ALTURA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ALTURA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IMC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IMC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CLASSIFICACAO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CLASSIFICACAO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PACIENTE.NOME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PACIENTE.NOME)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

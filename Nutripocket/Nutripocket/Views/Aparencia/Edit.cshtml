@@ -1,0 +1,140 @@
+﻿@model Nutripocket.Models.APARENCIA
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>APARENCIA</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.ID_APARENCIA)
+
+        @Html.HiddenFor(model => model.ID_PACIENTE)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.AP_FACE, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.AP_FACE)
+                @Html.ValidationMessageFor(model => model.AP_FACE)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.AP_LABIOS, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.AP_LABIOS)
+                @Html.ValidationMessageFor(model => model.AP_LABIOS)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.AP_LINGUA, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.AP_LINGUA)
+                @Html.ValidationMessageFor(model => model.AP_LINGUA)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.AP_GENGIVA, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.AP_GENGIVA)
+                @Html.ValidationMessageFor(model => model.AP_GENGIVA)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.AP_PELE, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.AP_PELE)
+                @Html.ValidationMessageFor(model => model.AP_PELE)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.AP_CABELOS, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.AP_CABELOS)
+                @Html.ValidationMessageFor(model => model.AP_CABELOS)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.AP_MUSCULOS, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.AP_MUSCULOS)
+                @Html.ValidationMessageFor(model => model.AP_MUSCULOS)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.AP_TRONCO, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.AP_TRONCO)
+                @Html.ValidationMessageFor(model => model.AP_TRONCO)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.AP_MEMBROS, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.AP_MEMBROS)
+                @Html.ValidationMessageFor(model => model.AP_MEMBROS)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.AP_UNHAS, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.AP_UNHAS)
+                @Html.ValidationMessageFor(model => model.AP_UNHAS)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.AP_SIST_NERVOSO, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.AP_SIST_NERVOSO)
+                @Html.ValidationMessageFor(model => model.AP_SIST_NERVOSO)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.AP_PESCOCO, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.AP_PESCOCO)
+                @Html.ValidationMessageFor(model => model.AP_PESCOCO)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Attribute145, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Attribute145)
+                @Html.ValidationMessageFor(model => model.Attribute145)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,48 @@
+﻿@model Nutripocket.Models.PACIENTE_CONSULTA
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>PACIENTE_CONSULTA</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.ID_CONSULTA)
+
+        @Html.HiddenFor(model => model.ID_PACIENTE)
+
+        @Html.HiddenFor(model => model.ID_ANTRO)
+
+        @Html.HiddenFor(model => model.ID_ANTECEDENTES)
+
+        @Html.HiddenFor(model => model.ID_DADOSGERAIS)
+
+        @Html.HiddenFor(model => model.ID_CLINICA)
+
+        @Html.HiddenFor(model => model.ID_APARENCIA)
+
+        @Html.HiddenFor(model => model.ID_EX_LABORA)
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
